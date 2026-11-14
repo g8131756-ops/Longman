@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOEFL Learning Companion — Longman Complete Course (Deborah Phillips)</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-alt: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --primary: #1e3a8a;
+      --primary-light: #2563eb;
+      --primary-soft: #eff6ff;
+      --accent: #0d9488;
+      --accent-soft: #f0fdfa;
+      --amber: #d97706;
+      --amber-soft: #fffbeb;
+      --rose: #e11d48;
+      --rose-soft: #fff1f2;
+      --purple: #7c3aed;
+      --purple-soft: #f5f3ff;
+      --radius: 12px;
+      --shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    /* Top Header & Navigation */
+    .topbar {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+    .topbar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand-badge {
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .brand h1 { font-size: 16px; font-weight: 700; }
+    .brand p { font-size: 11px; color: #cbd5e1; }
+    .topbar-stats {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .stat-pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Nav Tabs */
+    .nav-wrap {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-bar {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      padding: 6px 12px;
+      gap: 4px;
+    }
+    .nav-btn {
+      background: transparent;
+      border: none;
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-btn:hover { background: var(--surface-alt); color: var(--primary); }
+    .nav-btn.active {
+      background: var(--primary-soft);
+      color: var(--primary);
+      box-shadow: inset 0 -2px 0 var(--primary-light);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1280px;
+      margin: 18px auto;
+      padding: 0 16px 40px;
+    }
+
+    /* Cards & Grids */
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .card-title { font-size: 16px; font-weight: 700; color: var(--text); }
+    .card-sub { font-size: 12px; color: var(--text-muted); }
+
+    /* Badges & Buttons */
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .b-blue { background: var(--primary-soft); color: var(--primary-light); }
+    .b-teal { background: var(--accent-soft); color: var(--accent); }
+    .b-amber { background: var(--amber-soft); color: var(--amber); }
+    .b-rose { background: var(--rose-soft); color: var(--rose); }
+    .b-purple { background: var(--purple-soft); color: var(--purple); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn:hover { background: var(--surface-alt); border-color: #cbd5e1; }
+    .btn-primary { background: var(--primary-light); color: #fff; border-color: var(--primary-light); }
+    .btn-primary:hover { background: var(--primary); }
+    .btn-teal { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-teal:hover { background: #0f766e; }
+    .btn-sm { padding: 5px 10px; font-size: 12px; }
+
+    /* Progress Bar */
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 8px 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-light), var(--accent));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    /* Filter Pills */
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .pill.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* Grammar Color Tokens */
+    .tok-s { background: #dbeafe; color: #1e40af; padding: 2px 5px; border-radius: 4px; font-weight: 700; border-bottom: 2px solid #2563eb; }
+    .tok-v { background: #fee2e2; color: #991b1b; padding: 2px 5px; border-radius: 4px; font-weight: 700; border-bottom: 2px solid #dc2626; }
+    .tok-c { background: #f3e8ff; color: #6b21a8; padding: 2px 5px; border-radius: 4px; font-weight: 700; border-bottom: 2px solid #7c3aed; }
+    .tok-p { background: #fef3c7; color: #92400e; padding: 2px 5px; border-radius: 4px; font-style: italic; }
+    .tok-cl { background: #dcfce7; color: #166534; padding: 2px 5px; border-radius: 4px; border-bottom: 2px dashed #16a34a; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 10px 12px; border: 1px solid var(--border); text-align: left; }
+    th { background: var(--surface-alt); font-weight: 700; color: var(--text); }
+    tr:nth-child(even) td { background: #fafbfd; }
+
+    /* Quiz Options */
+    .opt-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      font-size: 13.5px;
+      transition: all 0.15s;
+    }
+    .opt-btn:hover { border-color: var(--primary-light); background: var(--primary-soft); }
+    .opt-btn.correct { background: #dcfce7; border-color: #16a34a; color: #14532d; font-weight: 600; }
+    .opt-btn.wrong { background: #fee2e2; border-color: #dc2626; color: #7f1d1d; }
+
+    /* Written Expression Underlines */
+    .we-word {
+      display: inline-block;
+      padding: 2px 6px;
+      margin: 0 2px;
+      border-bottom: 2px solid var(--primary-light);
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .we-word:hover { background: var(--primary-soft); }
+    .we-label { font-size: 10px; color: var(--primary-light); vertical-align: sub; font-weight: 800; }
+
+    /* Reading Split View & Highlight */
+    .passage-box {
+      background: #fcfcfd;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    .hl-evidence { background: #fef08a; padding: 2px 4px; border-radius: 4px; font-weight: 600; }
+    .insert-slot {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary-light);
+      border: 1px dashed var(--primary-light);
+      padding: 0 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      cursor: pointer;
+      margin: 0 3px;
+    }
+    .insert-slot.selected { background: var(--primary-light); color: #fff; }
+
+    /* Flashcards */
+    .flashcard {
+      min-height: 170px;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border: 2px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .flashcard:hover { border-color: var(--primary-light); }
+
+    /* Form Controls */
+    input[type="text"], select, textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 13.5px;
+      background: #fff;
+    }
+    textarea { min-height: 150px; resize: vertical; line-height: 1.6; }
+
+    .callout {
+      padding: 12px 14px;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-light);
+      background: var(--primary-soft);
+      margin: 10px 0;
+      font-size: 13px;
+    }
+    .callout-amber { border-left-color: var(--amber); background: var(--amber-soft); }
+    .callout-teal { border-left-color: var(--accent); background: var(--accent-soft); }
+    .callout-rose { border-left-color: var(--rose); background: var(--rose-soft); }
+
+    .skill-list {
+      max-height: 440px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-right: 4px;
+    }
+    .skill-item {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-item:hover { border-color: var(--primary-light); }
+    .skill-item.active { background: var(--primary-soft); border-color: var(--primary-light); }
+
+    .hidden { display: none !important; }
+    .mt-2 { margin-top: 8px; }
+    .mt-3 { margin-top: 12px; }
+    .mt-4 { margin-top: 16px; }
+    .mb-2 { margin-bottom: 8px; }
+    .mb-3 { margin-bottom: 12px; }
+    .flex-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-badge">LONGMAN 2001</span>
+        <div>
+          <h1>TOEFL Learning Companion</h1>
+          <p>Kurikulum Lengkap Deborah Phillips (PBT 217–677 &amp; CBT 0–300)</p>
+        </div>
+      </div>
+      <div class="topbar-stats">
+        <span class="stat-pill" id="hdr-mastered">Mastered: 0 / 116 Skills</span>
+        <span class="stat-pill" id="hdr-score">Est. PBT: 450 | CBT: 133</span>
+        <span class="stat-pill" id="hdr-storage" title="Status penyimpanan">Storage: Aktif</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION TABS (12 MODULES) -->
+  <nav class="nav-wrap">
+    <div class="nav-bar" id="nav-bar">
+      <button class="nav-btn active" data-tab="dashboard">1. Dashboard</button>
+      <button class="nav-btn" data-tab="fundamentals">2. Fundamentals</button>
+      <button class="nav-btn" data-tab="listening">3. Listening (34)</button>
+      <button class="nav-btn" data-tab="structure">4. Structure (60)</button>
+      <button class="nav-btn" data-tab="reading">5. Reading (14)</button>
+      <button class="nav-btn" data-tab="writing">6. Writing (8)</button>
+      <button class="nav-btn" data-tab="appendix">7. Appendix &amp; Vocab</button>
+      <button class="nav-btn" data-tab="practice">8. Practice Center</button>
+      <button class="nav-btn" data-tab="mistakes">9. Mistake Analyzer</button>
+      <button class="nav-btn" data-tab="studyplan">10. Study Plan</button>
+      <button class="nav-btn" data-tab="assistant">11. Virtual Tutor</button>
+      <button class="nav-btn" data-tab="audit">12. Audit Buku</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="container" id="app-root"></main>
+
+<script>
+(function() {
+  // =========================================================================
+  // 1. GOOGLE SITES SAFE STORAGE WRAPPER (Anti-Crash di Sandboxed Iframe)
+  // =========================================================================
+  const memoryFallback = {};
+  let storageMode = "Local";
+  const safeStorage = {
+    get(key, defaultVal) {
+      try {
+        const ls = window["localStorage"];
+        const raw = ls ? ls.getItem(key) : memoryFallback[key];
+        return raw ? JSON.parse(raw) : defaultVal;
+      } catch (e) {
+        storageMode = "Sesi (Iframe)";
+        return memoryFallback[key] ? JSON.parse(memoryFallback[key]) : defaultVal;
+      }
+    },
+    set(key, val) {
+      const str = JSON.stringify(val);
+      memoryFallback[key] = str;
+      try {
+        const ls = window["localStorage"];
+        if (ls) ls.setItem(key, str);
+      } catch (e) {
+        storageMode = "Sesi (Iframe)";
+      }
+    }
+  };
+
+  // =========================================================================
+  // 2. STATE MANAGEMENT
+  // =========================================================================
+  const state = {
+    activeTab: "dashboard",
+    masteredSkills: safeStorage.get("toefl_mastered", []),
+    mistakes: safeStorage.get("toefl_mistakes", []),
+    planChecks: safeStorage.get("toefl_plan", [0]),
+    vocabKnown: safeStorage.get("toefl_vocab_known", []),
+    practiceStats: safeStorage.get("toefl_stats", { attempted: 0, correct: 0, lScore: 45, sScore: 45, rScore: 45 }),
+    // UI sub-states
+    lFilter: "ALL",
+    lSelectedId: 1,
+    lShowTranscript: false,
+    sGroupFilter: "ALL",
+    sSearch: "",
+    sSelectedId: 1,
+    sStage: 1,
+    rSelectedId: 1,
+    rHighlight: false,
+    rInsertSlot: null,
+    wPromptIdx: 0,
+    wTimerSec: 1800,
+    wTimerRunning: false,
+    wEssayText: "",
+    appTab: "A",
+    fcIdx: 0,
+    fcFlipped: false,
+    fcOnlyUnknown: false,
+    pracMode: "ALL",
+    pracIdx: 0,
+    pracAnswered: null,
+    chatHistory: [
+      { role: "bot", text: "Halo! Saya Asisten Belajar TOEFL Longman (Deborah Phillips). Tanyakan nomor Skill (misal: 'Structure Skill 15' atau 'Listening Skill 4'), konsep grammar (misal: 'inversion', 'reduced clause', 'subjunctive'), atau tempelkan kalimat soal yang membingungkan!" }
+    ]
+  };
+
+  function saveState() {
+    safeStorage.set("toefl_mastered", state.masteredSkills);
+    safeStorage.set("toefl_mistakes", state.mistakes);
+    safeStorage.set("toefl_plan", state.planChecks);
+    safeStorage.set("toefl_vocab_known", state.vocabKnown);
+    safeStorage.set("toefl_stats", state.practiceStats);
+    updateTopbar();
+  }
+
+  function toggleMastered(code) {
+    const idx = state.masteredSkills.indexOf(code);
+    if (idx >= 0) state.masteredSkills.splice(idx, 1);
+    else state.masteredSkills.push(code);
+    saveState();
+    render();
+  }
+
+  function speakText(text) {
+    try {
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = "en-US";
+        u.rate = 0.92;
+        window.speechSynthesis.speak(u);
+      } else {
+        alert("Browser/iframe ini tidak mendukung fitur Text-to-Speech.");
+      }
+    } catch (e) {
+      alert("Audio speech dibatasi oleh pengaturan keamanan browser.");
+    }
+  }
+
+  // =========================================================================
+  // 3. CURRICULUM DATASET (DEBORAH PHILLIPS 2001 — COMPLETE COVERAGE)
+  // =========================================================================
+
+  // 34 LISTENING SKILLS (pp. 22–164)
+  const LISTENING_SKILLS = [
+    { id: 1, cat: "Short Dialogues (1-17)", title: "Skill 1: Focus on the Last Line", page: "p. 25", tip: "Jawaban benar untuk soal Short Dialogue hampir selalu terdapat pada baris terakhir (pembicara kedua).", dialogue: "Man: Billy really made a big mistake this time.\nWoman: Yes, he forgot to turn in his research paper.\nNarrator: What does the woman say about Billy?", q: "What does the woman say about Billy?", opts: ["It was the first time he made a mistake.", "He forgot to write his paper.", "He turned in the paper in the wrong place.", "He didn't remember to submit his assignment."], ans: 3, exp: "'forgot to turn in his research paper' sama artinya (restatement) dengan 'didn't remember to submit his assignment'." },
+    { id: 2, cat: "Short Dialogues (1-17)", title: "Skill 2: Choose Answers with Synonyms", page: "p. 27", tip: "Hindari pilihan yang mengulang kata persis dari audio. Cari sinonim dari kata kunci di baris kedua.", dialogue: "Woman: Why is Barbara feeling so happy?\nMan: She just started working in a real estate agency.\nNarrator: What does the man say about Barbara?", q: "What does the man say about Barbara?", opts: ["She always liked her work in real estate.", "She began a new job.", "She just bought some real estate.", "She bought a real estate agency."], ans: 1, exp: "Kata kunci 'started working' bersinonim dengan 'began a new job'." },
+    { id: 3, cat: "Short Dialogues (1-17)", title: "Skill 3: Avoid Similar Sounds", page: "p. 29", tip: "Jebakan klasik TOEFL: pilihan jawaban memakai kata yang bunyinya mirip dengan audio tetapi artinya berbeda jauh.", dialogue: "Man: Why couldn't Mark come with us?\nWoman: He was searching for a new apartment.\nNarrator: What does the woman say about Mark?", q: "What does the woman say about Mark?", opts: ["He was in the department office.", "He was looking for a place to live.", "He was working on his research project.", "He had an appointment at church."], ans: 1, exp: "'searching for a new apartment' = 'looking for a place to live'. 'department' dan 'appointment' adalah jebakan bunyi mirip (similar sounds)." },
+    { id: 4, cat: "Short Dialogues (1-17)", title: "Skill 4: Draw Conclusions About Who, What, Where", page: "p. 32", tip: "Tarik kesimpulan logis mengenai siapa pembicaranya, apa yang akan dilakukan, atau di mana percakapan terjadi dari petunjuk kosakata.", dialogue: "Woman: Can you tell me what assignments I missed when I was absent from your class?\nMan: You missed one homework assignment and a quiz.\nNarrator: Who is the man?", q: "Who is the man?", opts: ["A newspaper editor", "A police officer", "A teacher", "A student"], ans: 2, exp: "Petunjuk 'absent from your class', 'homework assignment', dan 'quiz' menunjukkan pria tersebut adalah seorang guru/dosen (teacher)." },
+    { id: 5, cat: "Short Dialogues (1-17)", title: "Skill 5: Listen for Who and What in Passives", page: "p. 35", tip: "Jika dialog menggunakan kalimat aktif, jawaban benar sering memakai kalimat pasif (atau sebaliknya). Perhatikan pelaku & objek!", dialogue: "Man: Did Sally go to the bank this morning?\nWoman: Yes, she did. She got a new checking account.\nNarrator: What does the woman imply?", q: "What does the woman imply?", opts: ["Sally wrote several checks.", "Sally wanted to check up on the bank.", "A new checking account was opened.", "Sally checked on the balance in her account."], ans: 2, exp: "Kalimat aktif 'She got a new checking account' diubah menjadi pasif 'A new checking account was opened'." },
+    { id: 6, cat: "Short Dialogues (1-17)", title: "Skill 6: Listen for Who and What with Multiple Nouns", page: "p. 37", tip: "Jika ada lebih dari satu orang/benda disebut, pastikan siapa melakukan apa (jangan tertukar subjek dan objek).", dialogue: "Man: Do you know who is in the band now?\nWoman: I heard that Mara replaced Robert in the band.\nNarrator: What does the woman say about the band?", q: "What does the woman say about the band?", opts: ["Robert became a new member of the band.", "Robert took Mara's place in the band.", "Mara didn't have a place in the band.", "Mara took Robert's place in the band."], ans: 3, exp: "'Mara replaced Robert' berarti Mara menggantikan posisi Robert (Mara took Robert's place)." },
+    { id: 7, cat: "Short Dialogues (1-17)", title: "Skill 7: Listen for Negative Expressions", page: "p. 40", tip: "Pernyataan negatif sering dijawab dengan pernyataan positif yang memakai kata berlawanan makna (antonim).", dialogue: "Man: How did they get to their grandmother's house in Maine in only five hours?\nWoman: They didn't drive slowly on the trip to Maine.\nNarrator: What does the woman say about the trip?", q: "What does the woman say about the trip?", opts: ["They drove rather quickly.", "They couldn't have driven more slowly.", "They wanted to travel slowly to Maine.", "They didn't drive to Maine."], ans: 0, exp: "'didn't drive slowly' = 'drove rather quickly'." },
+    { id: 8, cat: "Short Dialogues (1-17)", title: "Skill 8: Listen for Double Negative Expressions", page: "p. 42", tip: "Dua bentuk negatif dalam satu kalimat (misal: didn't + not / un- / neither) menghasilkan makna positif atau kemungkinan.", dialogue: "Man: I can't believe the news that I heard about the concert.\nWoman: Well, it isn't impossible for the concert to take place.\nNarrator: What does the woman say about the concert?", q: "What does the woman say about the concert?", opts: ["There's no possibility that the concert will take place.", "The concert will definitely not take place.", "The concert might take place.", "The concert can't take place."], ans: 2, exp: "'isn't impossible' (double negative) berarti ada kemungkinan konser tersebut berlangsung (might take place)." },
+    { id: 9, cat: "Short Dialogues (1-17)", title: "Skill 9: Listen for 'Almost Negative' Expressions", page: "p. 44", tip: "Kata seperti hardly, barely, scarcely, seldom, rarely bermakna 'hampir tidak' atau 'jarang sekali'.", dialogue: "Woman: Were you able to pay the electric bill?\nMan: I had barely enough money.\nNarrator: What does the man imply?", q: "What does the man imply?", opts: ["He had plenty of money for the bill.", "He did not have enough money for the bill.", "He paid the bill but has no money left.", "He was unable to pay the bill."], ans: 2, exp: "'barely enough money' berarti uangnya pas-pasan sekali untuk membayar tagihan (paid the bill, no money left)." },
+    { id: 10, cat: "Short Dialogues (1-17)", title: "Skill 10: Listen for Negatives with Comparatives", page: "p. 46", tip: "Negatif + Comparative (misal: 'No one is more intelligent than she is') bermakna Superlative ('She is the most intelligent').", dialogue: "Woman: What do you think of the new student in math class?\nMan: No one is more intelligent than she is.\nNarrator: What does the man say about the new student?", q: "What does the man say about the new student?", opts: ["She is not very smart.", "He is smarter than she is.", "Other students are smarter than she is.", "She is the smartest student in the class."], ans: 3, exp: "'No one is more intelligent than she is' = makna superlatif 'She is the smartest'." },
+    { id: 11, cat: "Short Dialogues (1-17)", title: "Skill 11: Listen for Expressions of Agreement", page: "p. 49", tip: "Kenali ekspresi setuju pada pernyataan positif ('So do I', 'Me, too', 'I'll say!', 'Isn't it!') dan negatif ('Neither do I', 'I don't either').", dialogue: "Man: I think that the hypothesis is indefensible.\nWoman: So do I.\nNarrator: What does the woman mean?", q: "What does the woman mean?", opts: ["She is unsure about the hypothesis.", "The hippopotamus is behind the fence.", "She thinks that the hypothesis can be defended.", "She agrees with the man."], ans: 3, exp: "'So do I' adalah ekspresi persetujuan langsung terhadap pernyataan positif pria tersebut." },
+    { id: 12, cat: "Short Dialogues (1-17)", title: "Skill 12: Listen for Expressions of Uncertainty and Suggestion", page: "p. 51", tip: "Ketidakpastian: '...isn't it? (tag question)', 'As far as I know', 'As far as I can tell'. Saran: 'Why not...?', 'Let's...'.", dialogue: "Man: Do you know anything about the final exam in physics?\nWoman: It's going to be rather difficult, isn't it?\nNarrator: What does the woman mean?", q: "What does the woman mean?", opts: ["The exam is not going to be too difficult.", "She's positive that it's going to be hard.", "She thinks that it might be hard.", "She has no idea about the exam."], ans: 2, exp: "Question tag dengan intonasi naik ('isn't it?') menandakan ketidakpastian / dugaan (thinks it might be hard)." },
+    { id: 13, cat: "Short Dialogues (1-17)", title: "Skill 13: Listen for Emphatic Expressions of Surprise", page: "p. 54", tip: "Penekanan pada auxiliary verb ('Then he DID get a job!', 'So you ARE going!') menunjukkan rasa terkejut karena sebelumnya pembicara mengira sebaliknya.", dialogue: "Woman: Did you see Paul driving around in a Mustang?\nMan: Then he DID get a new car.\nNarrator: What had the man thought?", q: "What had the man thought?", opts: ["Paul would definitely get a Mustang.", "Paul did not know how to drive.", "Paul did not like Mustangs.", "Paul would not get a new car."], ans: 3, exp: "Penekanan 'DID get' menunjukkan pria itu awalnya mengira Paul TIDAK akan mendapat mobil baru." },
+    { id: 14, cat: "Short Dialogues (1-17)", title: "Skill 14: Listen for Wishes", page: "p. 57", tip: "Fakta selalu berlawanan dengan harapan (wish): 'I wish I had time' berarti faktanya 'I do NOT have time'.", dialogue: "Woman: It's too bad that you have to stay here and work during the school break.\nMan: I really wish I could go with you and the others to Palm Springs.\nNarrator: What does the man mean?", q: "What does the man mean?", opts: ["Maybe he will go with the others on the trip.", "He is unable to go on the trip.", "He's happy to be going on the trip.", "He's going on the trip, but not with the others."], ans: 1, exp: "'wish I could go' menyiratkan kenyataan sebaliknya: ia tidak bisa pergi (unable to go)." },
+    { id: 15, cat: "Short Dialogues (1-17)", title: "Skill 15: Listen for Untrue Conditions", page: "p. 59", tip: "Kalimat pengandaian tipe 2 & 3 (If + past / past perfect) menyiratkan fakta yang berlawanan dengan kondisi tersebut.", dialogue: "Man: Do you think that you'll be able to go to the party?\nWoman: If I had time, I would go.\nNarrator: What does the woman say about the party?", q: "What does the woman say about the party?", opts: ["Maybe she'll go.", "She has time, so she'll go.", "She is going even if she doesn't have time.", "It's impossible to go."], ans: 3, exp: "'If I had time, I would go' = faktanya ia tidak punya waktu sehingga tidak mungkin pergi." },
+    { id: 16, cat: "Short Dialogues (1-17)", title: "Skill 16: Listen for Two- and Three-Part Verbs", page: "p. 62", tip: "Phrasal verbs (misal: call off = cancel, put off = delay, run out of = exhaust supply) memiliki makna idiomatis.", dialogue: "Man: What time does the meeting start?\nWoman: Didn't you hear that it was called off by the director?\nNarrator: What does the woman say about the meeting?", q: "What does the woman say about the meeting?", opts: ["The director called a meeting.", "The director phoned her about the meeting.", "The director called the meeting to order.", "The director canceled the meeting."], ans: 3, exp: "'called off' bermakna membatalkan (canceled)." },
+    { id: 17, cat: "Short Dialogues (1-17)", title: "Skill 17: Listen for Idioms", page: "p. 64", tip: "Jangan artikan idiom secara harfiah! (misal: 'piece of cake' = sangat mudah, 'burning the candle at both ends' = bekerja terlalu keras).", dialogue: "Man: Tom is a full-time student and is holding down a full-time job.\nWoman: He's really burning the candle at both ends.\nNarrator: What does the woman say about Tom?", q: "What does the woman say about Tom?", opts: ["He's lighting a candle.", "He's holding the candle at the top and the bottom.", "He's doing too much.", "He's working as a firefighter."], ans: 2, exp: "'burning the candle at both ends' berarti melakukan terlalu banyak aktivitas/bekerja terlalu keras hingga kelelahan." },
+    { id: 18, cat: "Long Conversations (18-22)", title: "Skills 18-22: Long Conversations (Before & While Listening)", page: "pp. 74-86", tip: "Skill 18: Antisipasi topik dari pilihan jawaban. Skill 19: Antisipasi pertanyaan. Skill 20: Tentukan topik di kalimat awal. Skill 21: Simpulkan who/what/where/when. Skill 22: Dengarkan jawaban berurutan sesuai nomor soal.", dialogue: "[Long Conversation Excerpt]\nMan: I'm looking for a part-time job on campus.\nWoman: Well, the campus library is looking for student assistants to shelve books in the evenings.\nMan: That sounds great! Where do I apply?", q: "Where does this conversation probably take place?", opts: ["In a classroom", "At a campus employment office", "In a bookstore", "At a dormitory"], ans: 1, exp: "Skill 21 (Who/What/Where): Mahasiswa mencari kerja paruh waktu di kampus -> kantor penempatan kerja kampus." },
+    { id: 23, cat: "Long Talks (23-27)", title: "Skills 23-27: Long Talks (Before & While Listening)", page: "pp. 93-105", tip: "Skill 23-24: Antisipasi topik & pertanyaan sebelum audio mulai. Skill 25: Kalimat pertama kuliah memuat ide utama. Skill 26: Simpulkan konteks mata kuliah. Skill 27: Ikuti detail berurutan.", dialogue: "[Long Talk Excerpt]\nProfessor: Welcome to Biology 101. Today we will examine how desert cacti store water in their thick stems rather than leaves to minimize evaporation.", q: "What is the main topic of the talk?", opts: ["How to grow houseplants", "How desert cacti conserve water", "The history of desert exploration", "Types of tropical trees"], ans: 1, exp: "Skill 25: Kalimat pembuka kuliah ('Today we will examine how desert cacti store water...') langsung menyebutkan topik utama." },
+    { id: 28, cat: "CBT Casual Conversations (28)", title: "Skill 28: Casual Conversations (CBT Format)", page: "p. 113", tip: "Pada format CBT, percakapan santai antarmahasiswa menanyakan ide utama, detail spesifik, serta fungsi pernyataan pembicara.", dialogue: "[CBT Casual Conversation]\nStudent A: Are you ready for Professor Hill's history midterm tomorrow?\nStudent B: Honestly, I'm still reviewing the chapters on the Industrial Revolution.", q: "What are the students discussing?", opts: ["A graduation ceremony", "Preparing for a history exam", "Applying for a scholarship", "Changing their major"], ans: 1, exp: "Percakapan berfokus pada persiapan ujian tengah semester mata kuliah sejarah." },
+    { id: 29, cat: "CBT Academic Discussions (29-31)", title: "Skills 29-31: Academic Discussions (Classification & Process)", page: "pp. 122-135", tip: "Skill 29: Antisipasi visual layar CBT. Skill 30: Pahami ide utama & detail diskusi dosen-mahasiswa. Skill 31: Jawab soal tipe Classification (pengelompokan kategori) dan Process/Sequence (urutan tahapan, misal proses biji kakao menjadi cokelat).", dialogue: "[Academic Discussion: Cacao Tree & Chocolate Process]\nProfessor: First, cacao pods are harvested from the tree. Second, the beans are fermented and dried. Third, they are roasted and ground into chocolate liquor.", q: "What is the correct sequence in processing cacao beans?", opts: ["Roast -> Harvest -> Ferment", "Harvest -> Ferment & Dry -> Roast & Grind", "Grind -> Dry -> Harvest", "Ferment -> Harvest -> Roast"], ans: 1, exp: "Skill 31 (Process Diagram): Urutan yang tepat sesuai diskusi adalah Panen (Harvest) -> Fermentasi & Pengeringan -> Sangrai & Giling." },
+    { id: 32, cat: "CBT Academic Lectures (32-34)", title: "Skills 32-34: Academic Lectures (CBT Format)", page: "pp. 142-160", tip: "Skill 32: Perhatikan istilah kunci di papan tulis visual CBT. Skill 33: Tangkap tesis utama & detail pendukung kuliah. Skill 34: Lengkapi tabel matriks kategori atau urutan langkah akademik.", dialogue: "[Academic Lecture: Plate Tectonics]\nLecturer: Convergent boundaries occur when plates collide, forming mountains, whereas divergent boundaries occur when plates pull apart, creating mid-ocean ridges.", q: "Which geological feature is associated with divergent boundaries?", opts: ["Deep ocean trenches only", "Mid-ocean ridges", "Folded mountain ranges", "Glacial valleys"], ans: 1, exp: "Skill 34 (Classification Matrix): Divergent boundaries (lempeng saling menjauh) membentuk mid-ocean ridges." }
+  ];
+
+  // ALL 60 STRUCTURE SKILLS (pp. 198–330) — Complete Group A–R Coverage
+  const STRUCTURE_SKILLS = [
+    { id: 1, grp: "A. Sentences with One Clause (1-5)", title: "Skill 1: Be Sure the Sentence Has a Subject and a Verb", formula: "Subject + Verb + (Object/Complement)", tokens: "<span class='tok-s'>The boy</span> <span class='tok-v'>was going</span> <span class='tok-p'>to the movies</span> <span class='tok-p'>with a friend</span>.", rule: "Setiap kalimat bahasa Inggris wajib memiliki minimal satu Subject dan satu Verb utama. Frasa preposisi (to the movies) bukan Subject.", trap: "Menempatkan kata benda/preposisi tanpa Verb atau menggandakan Subject.", qType: "SC", q: "_____ was backed up for miles on the freeway.", opts: ["Yesterday", "In the morning", "Traffic", "Cars"], ans: 2, exp: "Verb tunggal 'was backed up' membutuhkan Subject tunggal. 'Traffic' adalah uncountable noun tunggal yang tepat." },
+    { id: 2, grp: "A. Sentences with One Clause (1-5)", title: "Skill 2: Be Careful of Objects of Prepositions", formula: "Preposition + Noun (Object of Prep) ≠ Subject", tokens: "<span class='tok-p'>With his friend</span> <span class='tok-s'>he</span> <span class='tok-v'>found</span> the movie theater.", rule: "Kata benda setelah preposisi (in, at, on, to, by, with, of) adalah Object of Preposition, BUKAN Subject kalimat.", trap: "Mengira kata benda di dalam frasa preposisi adalah Subject.", qType: "SC", q: "With his friend _____ found the movie theater.", opts: ["has", "he", "later", "when"], ans: 1, exp: "'With his friend' adalah frasa preposisi, sedangkan 'found' adalah Verb. Kalimat masih kekurangan Subject ('he')." },
+    { id: 3, grp: "A. Sentences with One Clause (1-5)", title: "Skill 3: Be Careful of Appositives", formula: "Subject, [Appositive Noun Phrase], Verb", tokens: "<span class='tok-s'>Tom</span>, <span class='tok-cl'>a really good mechanic</span>, <span class='tok-v'>is fixing</span> the car.", rule: "Appositive adalah frasa kata benda yang menjelaskan Subject dan diapit koma. Appositive bukan Subject dan bukan Verb.", trap: "Memilih pilihan yang mengandung Verb di dalam slot appositive.", qType: "SC", q: "_____, George, is attending the lecture.", opts: ["Right now", "Happily", "Because of the time", "My friend"], ans: 3, exp: "'George' berada di antara dua koma sebagai appositive, sehingga slot awal membutuhkan Subject berupa frasa benda ('My friend')." },
+    { id: 4, grp: "A. Sentences with One Clause (1-5)", title: "Skill 4: Be Careful of Present Participles (V-ing)", formula: "Noun + [V-ing (Adjective)] + Main Verb", tokens: "<span class='tok-s'>The man</span> <span class='tok-cl'>talking to his friend</span> <span class='tok-v'>has</span> a beard.", rule: "Verb-ing tanpa 'be' (is/am/are/was/were) berfungsi sebagai Adjective (kata sifat), bukan Verb utama.", trap: "Mengira V-ing tanpa 'be' sudah menjadi Verb kalimat.", qType: "SC", q: "The child _____ playing in the yard is my son.", opts: ["now", "is", "he", "was"], ans: 0, exp: "Kalimat sudah memiliki Verb utama 'is' ('is my son'). Jadi 'playing' adalah present participle (adjective) dan hanya butuh keterangan 'now'." },
+    { id: 5, grp: "A. Sentences with One Clause (1-5)", title: "Skill 5: Be Careful of Past Participles (V3)", formula: "Noun + [V3 (Passive Adjective)] + Main Verb", tokens: "<span class='tok-s'>The television</span> <span class='tok-cl'>purchased yesterday</span> <span class='tok-v'>was</span> expensive.", rule: "Verb-3 tanpa 'have/be' berfungsi sebagai Adjective pasif, bukan Verb utama kalimat.", trap: "Bingung membedakan V2 aktif dengan V3 pasif sebagai modifier.", qType: "SC", q: "The packages _____ mailed at the post office will arrive Monday.", opts: ["have", "were", "them", "just"], ans: 3, exp: "Verb utama adalah 'will arrive'. 'mailed' adalah past participle (adjective), bukan verb, sehingga kata keterangan 'just' paling tepat." },
+    { id: 6, grp: "B. Sentences with Multiple Clauses (6-8)", title: "Skill 6: Use Coordinate Connectors Correctly", formula: "S + V, [and / but / or / so / yet] S + V", tokens: "<span class='tok-s'>Tom</span> <span class='tok-v'>is singing</span>, <span class='tok-c'>and</span> <span class='tok-s'>Paul</span> <span class='tok-v'>is dancing</span>.", rule: "Dua klausa setara dihubungkan oleh coordinate connector (FANBOYS: for, and, nor, but, or, yet, so) dengan tanda koma sebelumnya.", trap: "Menggabungkan dua klausa tanpa konektor (comma splice).", qType: "SC", q: "A power failure occurred, _____ the lamps went out.", opts: ["then", "so", "later", "next"], ans: 1, exp: "Dua klausa lengkap membutuhkan coordinate connector 'so' (bukan adverb seperti then/later)." },
+    { id: 7, grp: "B. Sentences with Multiple Clauses (6-8)", title: "Skill 7: Use Adverb Time and Cause Connectors Correctly", formula: "S + V + [when/before/after/because/since] + S + V", tokens: "<span class='tok-s'>Teresa</span> <span class='tok-v'>went</span> inside <span class='tok-c'>because</span> <span class='tok-s'>it</span> <span class='tok-v'>was raining</span>.", rule: "Konektor waktu (when, while, since, before, after, until) dan sebab (because, since, as) diikuti S + V.", trap: "Menghilangkan Subject atau Verb setelah konektor.", qType: "SC", q: "_____ was late, I missed the appointment.", opts: ["I", "Because", "The train", "Since he"], ans: 3, exp: "Klausa kedua 'I missed...' sudah lengkap, klausa pertama memiliki verb 'was late' sehingga butuh Connector + Subject ('Since he')." },
+    { id: 8, grp: "B. Sentences with Multiple Clauses (6-8)", title: "Skill 8: Use Other Adverb Connectors Correctly", formula: "[if / although / even though / whereas / unless] + S + V", tokens: "<span class='tok-c'>Although</span> <span class='tok-s'>it</span> <span class='tok-v'>was raining</span>, <span class='tok-s'>Bob</span> <span class='tok-v'>went</span> for a walk.", rule: "Konektor syarat (if, unless), pertentangan (although, even though, though, while, whereas), dan cara (as, in that) menghubungkan dua klausa.", trap: "Memakai preposisi 'despite/in spite of' untuk klausa lengkap.", qType: "SC", q: "You will get a good grade on the exam provided _____.", opts: ["studying", "study", "to study", "you study"], ans: 3, exp: "'provided (that)' adalah adverb condition connector yang wajib diikuti Subject + Verb ('you study')." },
+    { id: 9, grp: "C. More Sentences with Multiple Clauses (9-12)", title: "Skill 9: Use Noun Clause Connectors Correctly", formula: "S + V + [what / when / where / why / how / whether / that] + S + V", tokens: "<span class='tok-s'>I</span> <span class='tok-v'>know</span> <span class='tok-c'>when</span> <span class='tok-s'>he</span> <span class='tok-v'>will arrive</span>.", rule: "Noun clause berfungsi sebagai objek kata kerja atau subjek kalimat. Susunan kata di dalam noun clause WAJIB pernyataan (S + V), bukan kalimat tanya (V + S).", trap: "Membalik urutan menjadi pertanyaan ('when will he arrive').", qType: "SC", q: "_____ was late caused many problems.", opts: ["That he", "The driver", "There", "Because"], ans: 0, exp: "Terdapat dua verb ('was' dan 'caused'), sehingga dibutuhkan Noun Clause sebagai subjek: 'That he was late'." },
+    { id: 10, grp: "C. More Sentences with Multiple Clauses (9-12)", title: "Skill 10: Use Noun Clause Connector/Subjects Correctly", formula: "S + V + [who / whoever / what / whatever / which] + V", tokens: "<span class='tok-s'>I</span> <span class='tok-v'>do not know</span> <span class='tok-c'>what</span> <span class='tok-v'>is</span> in the box.", rule: "Kata seperti who, what, which dapat berperan ganda sebagai Connector sekaligus Subject bagi klausa benda tersebut.", trap: "Menambahkan subjek ganda setelah who/what.", qType: "SC", q: "_____ was on television made me angry.", opts: ["It", "The story", "What", "When"], ans: 2, exp: "Terdapat dua verb ('was' dan 'made'). 'What' berfungsi sebagai connector sekaligus subjek bagi 'was on television'." },
+    { id: 11, grp: "C. More Sentences with Multiple Clauses (9-12)", title: "Skill 11: Use Adjective Clause Connectors Correctly", formula: "Noun + [whom / which / that] + S + V", tokens: "<span class='tok-s'>The woman</span> <span class='tok-c'>whom</span> <span class='tok-s'>you</span> <span class='tok-v'>met</span> <span class='tok-v'>is</span> my sister.", rule: "Adjective clause menjelaskan kata benda di depannya. Whom (orang), which (benda), that (orang/benda) diikuti S + V.", trap: "Mengulang objek di akhir klausa ('whom you met her').", qType: "SC", q: "The gift _____ selected for the bride was rather expensive.", opts: ["because", "was", "since", "which we"], ans: 3, exp: "'The gift' dijelaskan oleh adjective clause yang membutuhkan connector + subject ('which we')." },
+    { id: 12, grp: "C. More Sentences with Multiple Clauses (9-12)", title: "Skill 12: Use Adjective Clause Connector/Subjects Correctly", formula: "Noun + [who / which / that] + V", tokens: "<span class='tok-s'>The woman</span> <span class='tok-c'>who</span> <span class='tok-v'>is waving</span> to us <span class='tok-v'>is</span> the tour guide.", rule: "Who (orang), which (benda), dan that (orang/benda) dapat langsung menjadi Subject bagi Verb dalam adjective clause.", trap: "Memakai 'whom' sebagai subjek verb.", qType: "SC", q: "_____ is on the table has four sections.", opts: ["The notebook", "The notebook which", "Because the notebook", "In the notebook"], ans: 1, exp: "Ada dua verb ('is' dan 'has'), sehingga diperlukan subjek + adjective clause connector/subject ('The notebook which')." },
+    { id: 13, grp: "D. Sentences with Reduced Clauses (13-14)", title: "Skill 13: Use Reduced Adjective Clauses Correctly", formula: "Noun + [V-ing (Active) / V3 (Passive)] (tanpa who/which/that + be)", tokens: "<span class='tok-s'>The woman</span> <span class='tok-cl'>waving to us</span> <span class='tok-v'>is</span> the tour guide.", rule: "Adjective clause dapat dipersingkat dengan menghapus connector (who/which/that) dan 'be'. Aktif -> V-ing; Pasif -> V3.", trap: "Mempertahankan connector tanpa verb lengkap.", qType: "SC", q: "_____ on several different television programs, the witness gave conflicting accounts.", opts: ["He appeared", "Who appeared", "Appearing", "Appears"], ans: 2, exp: "Reduced adjective clause di awal kalimat: 'Appearing on several... programs, the witness...'." },
+    { id: 14, grp: "D. Sentences with Reduced Clauses (13-14)", title: "Skill 14: Use Reduced Adverb Clauses Correctly", formula: "[Although / When / While / If] + [V-ing / V3 / Adj], S + V", tokens: "<span class='tok-c'>Although</span> <span class='tok-cl'>rather unwell</span>, <span class='tok-s'>the speaker</span> <span class='tok-v'>will take</span> part in the seminar.", rule: "Adverb clause (dengan subjek yang sama dengan klausa utama) dapat diringkas dengan mempertahankan konektor lalu membuang S + be.", trap: "Meringkas klausa padahal subjeknya berbeda (dangling modifier).", qType: "SC", q: "When _____ nests during spring nesting season, Canadian geese are fiercely territorial.", opts: ["building", "are building", "built", "are built"], ans: 0, exp: "Subjek sama (Canadian geese aktif membangun sarang): 'When building nests...'." },
+    { id: 15, grp: "E. Sentences with Inverted Subjects and Verbs (15-19)", title: "Skill 15: Invert the Subject and Verb with Question Words", formula: "[What/When/Where/Why/How] + V + S (hanya pada kalimat tanya)", tokens: "<span class='tok-c'>What</span> <span class='tok-v'>is</span> <span class='tok-s'>the homework</span>?", rule: "Inversi (V + S) terjadi setelah kata tanya jika kalimatnya adalah pertanyaan langsung. Jika berfungsi sebagai noun clause dalam kalimat berita, tetap S + V.", trap: "Melakukan inversi pada indirect question ('I know what is it' -> SALAH).", qType: "SC", q: "The lawyer asked the client why _____ it.", opts: ["did he do", "did he", "he did", "did"], ans: 2, exp: "Ini adalah kalimat pernyataan dengan noun clause ('asked... why he did it'), sehingga TIDAK diinversi." },
+    { id: 16, grp: "E. Sentences with Inverted Subjects and Verbs (15-19)", title: "Skill 16: Invert the Subject and Verb with Place Expressions", formula: "[Place Expression] + V + S", tokens: "<span class='tok-p'>In the closet</span> <span class='tok-v'>are</span> <span class='tok-s'>the clothes</span> that you want.", rule: "Jika keterangan tempat (here, there, in the room, around the corner) diletakkan di awal kalimat dan wajib bagi makna verb, Subject dan Verb diinversi.", trap: "Menganggap frasa preposisi di awal sebagai subjek.", qType: "SC", q: "In front of the house _____ some giant trees.", opts: ["were", "was", "it was", "there were"], ans: 0, exp: "Keterangan tempat 'In front of the house' memicu inversi. Subjeknya jamak ('some giant trees'), maka verb-nya 'were'." },
+    { id: 17, grp: "E. Sentences with Inverted Subjects and Verbs (15-19)", title: "Skill 17: Invert the Subject and Verb with Negatives", formula: "[Never / Seldom / Rarely / Hardly / Not only] + Aux + S + V", tokens: "<span class='tok-c'>Not once</span> <span class='tok-v'>did</span> <span class='tok-s'>I</span> <span class='tok-v'>miss</span> a question.", rule: "Ekspresi negatif atau hampir negatif di awal kalimat wajib memicu inversi (Auxiliary + Subject + Main Verb).", trap: "Lupa menambahkan auxiliary do/does/did saat inversi.", qType: "SC", q: "Never _____ such an inspiring speech.", opts: ["I have heard", "have I heard", "I heard", "heard I"], ans: 1, exp: "'Never' di awal kalimat memicu inversi: 'Never have I heard...'." },
+    { id: 18, grp: "E. Sentences with Inverted Subjects and Verbs (15-19)", title: "Skill 18: Invert the Subject and Verb with Conditionals", formula: "[Had / Were / Should] + S + V (tanpa 'if')", tokens: "<span class='tok-v'>Were</span> <span class='tok-s'>he</span> here, he would help.", rule: "Dalam kalimat pengandaian (conditional), jika kata 'if' dihapus, auxiliary (had, were, should) berpindah ke depan Subject.", trap: "Mempertahankan 'if' sekaligus melakukan inversi.", qType: "SC", q: "_____ more time, I would have checked the answers again.", opts: ["If I had", "Had I had", "I had had", "If had I"], ans: 1, exp: "Bentuk inversi dari 'If I had had' (Conditional Type 3 tanpa 'if') adalah 'Had I had'." },
+    { id: 19, grp: "E. Sentences with Inverted Subjects and Verbs (15-19)", title: "Skill 19: Invert the Subject and Verb with Comparisons", formula: "S + V + [more ... than / as ... as] + V + S", tokens: "<span class='tok-s'>My sister</span> <span class='tok-v'>spends</span> more hours in the office than <span class='tok-v'>does</span> <span class='tok-s'>John</span>.", rule: "Setelah bentuk perbandingan (than / as...as), Subject dan Verb boleh diinversi (opsional namun sering muncul di TOEFL).", trap: "Bingung melihat 'than does John' atau 'than do other students'.", qType: "SC", q: "The results of the current experiment appear to be more consistent than _____ the results of any previous tests.", opts: ["them", "were", "they were", "were they"], ans: 1, exp: "Setelah 'than', subjek jamak 'the results of any previous tests' diinversi dengan verb 'were'." },
+    { id: 20, grp: "F. Subject-Verb Agreement (20-23)", title: "Skills 20-23: Subject-Verb Agreement Rules", formula: "Singular S -> Singular V | Plural S -> Plural V", tokens: "<span class='tok-s'>The key</span> <span class='tok-p'>to the doors</span> <span class='tok-v'>is</span> in the drawer.", rule: "Skill 20: Abaikan frasa preposisi di antara S dan V. Skill 21: Setelah all/most/some/half of + Noun, lihat Noun-nya. Skill 22: After inverted V+S, cek S di belakang. Skill 23: Kata seperti everybody, each, every, one selalu tunggal.", trap: "Menyesuaikan verb dengan kata benda jamak di dalam prepositional phrase ('doors').", qType: "WE", sentenceParts: ["The", "chairs", "in the living room", "is", "being", "repaired."], underlined: [1, 2, 3, 5], ans: 2, exp: "Skill 20: Subjeknya jamak ('The chairs'), sehingga verb harus jamak ('are', bukan 'is')." },
+    { id: 24, grp: "G. Parallel Structure (24-26)", title: "Skills 24-26: Parallel Structure (Coordinate, Paired, Comparisons)", formula: "A, B, and C | both A and B | not only A but also B", tokens: "<span class='tok-s'>He</span> <span class='tok-v'>likes</span> <span class='tok-cl'>to swim, to hike, and to ride</span> a bicycle.", rule: "Skill 24: Kata hubung and/but/or menyatukan bentuk gramatikal yang setara. Skill 25: Paired conjunctions (both...and, either...or, neither...nor, not only...but also) harus sejajar. Skill 26: Perbandingan (more...than, as...as) membandingkan hal yang setara.", trap: "Mencampur gerund (swimming) dengan to-infinitive (to hike).", qType: "WE", sentenceParts: ["The", "speaker", "was", "eloquent,", "persuasive,", "and", "he had knowledge."], underlined: [1, 3, 4, 6], ans: 3, exp: "Skill 24: Agar sejajar dengan kata sifat 'eloquent' dan 'persuasive', bagian akhir harus berupa kata sifat 'knowledgeable'." },
+    { id: 27, grp: "H. Comparatives and Superlatives (27-29)", title: "Skills 27-29: Form, Use & Irregular -er/-est", formula: "Comparative: -er / more + than | Superlative: the + -est / most", tokens: "<span class='tok-s'>Bob</span> <span class='tok-v'>is</span> <span class='tok-cl'>taller than</span> Ron. <span class='tok-s'>Sally</span> <span class='tok-v'>is</span> <span class='tok-cl'>the tallest</span>.", rule: "Skill 27: Kata pendek pakai -er/-est; kata panjang pakai more/most (jangan digabung 'more taller'). Skill 28: Comparative untuk 2 hal, Superlative untuk 3+ hal. Skill 29: Pola 'The more..., the more...'.", trap: "Double comparative ('more easier') atau memakai superlative untuk 2 benda.", qType: "WE", sentenceParts: ["Of the", "two", "candidates,", "Sarah is", "the", "most qualified", "for the role."], underlined: [0, 1, 5, 6], ans: 2, exp: "Skill 28: Karena hanya membandingkan DUA kandidat ('two candidates'), gunakan comparative 'the more qualified', bukan superlative 'most qualified'." },
+    { id: 30, grp: "I. Problems with Verbs (30-36)", title: "Skills 30-36: Have + V3, Be + V-ing/V3, Modals & Tenses", formula: "Have/Has/Had + V3 | Be + V-ing / V3 | Modal + V1 (Base)", tokens: "<span class='tok-s'>They</span> <span class='tok-v'>have walked</span> to school. <span class='tok-s'>She</span> <span class='tok-v'>must go</span> now.", rule: "Skill 30: Have + Past Participle (V3). Skill 31: Be + V-ing/V3. Skill 32: Modal + Base Form (V1). Skill 33-34: Kapan memakai Past vs Present Perfect (since/for). Skill 35-36: Tense yang tepat bersama time expression & will/would.", trap: "Memakai V2 setelah have/has ('has went' -> SALAH, harus 'has gone').", qType: "WE", sentenceParts: ["The", "committee", "has", "already", "took", "a final", "decision."], underlined: [1, 2, 4, 6], ans: 2, exp: "Skill 30: Setelah auxiliary 'has', gunakan Past Participle (V3) 'taken', bukan V2 'took'." },
+    { id: 37, grp: "J. Passive Verbs (37-38)", title: "Skills 37-38: Form and Meaning of the Passive", formula: "Passive = Be + Past Participle (V3) + (by Agent)", tokens: "<span class='tok-s'>The portrait</span> <span class='tok-v'>was painted</span> <span class='tok-p'>by a famous artist</span>.", rule: "Skill 37: Pasif wajib mengandung 'be + V3'. Skill 38: Cek apakah subjek melakukan aksi (aktif) atau dikenai aksi (pasif). Objek langsung tidak muncul setelah verb pasif.", trap: "Kalimat bermakna pasif tetapi tidak memakai 'be' ('The letter mailed yesterday').", qType: "WE", sentenceParts: ["The", "new bridge", "will", "complete", "by the", "end of", "next year."], underlined: [1, 3, 4, 6], ans: 1, exp: "Skill 38: Jembatan tidak bisa menyelesaikan dirinya sendiri (makna pasif), jadi harus 'will be completed'." },
+    { id: 39, grp: "K. Nouns (39-42)", title: "Skills 39-42: Singular/Plural, Countable/Uncountable & Irregulars", formula: "Many/Few/Number + Plural | Much/Little/Amount + Uncountable", tokens: "<span class='tok-s'>Many</span> <span class='tok-cl'>criteria</span> <span class='tok-v'>were</span> used to evaluate the data.", rule: "Skill 39: Each/every/single/one + Singular; both/two/many/several + Plural. Skill 40: Countable vs Uncountable (information, equipment, furniture, news tak ada bentuk -s). Skill 41: Irregular plurals (criteria, phenomena, cacti, alumni). Skill 42: Bedakan Person (accountant) vs Thing (accounting).", trap: "Menambahkan '-s' pada uncountable noun ('informations', 'equipments').", qType: "WE", sentenceParts: ["The", "laboratory", "recently", "purchased", "several", "new", "equipments."], underlined: [0, 2, 3, 6], ans: 3, exp: "Skill 40: 'Equipment' adalah uncountable noun sehingga tidak pernah berbentuk jamak 'equipments'." },
+    { id: 43, grp: "L. Pronouns (43-45)", title: "Skills 43-45: Subject/Object, Possessive & Pronoun Reference", formula: "Subject (I/he/she/they) | Object (me/him/her/them) | Possessive (its vs it's)", tokens: "<span class='tok-s'>The dog</span> <span class='tok-v'>wagged</span> <span class='tok-cl'>its</span> tail.", rule: "Skill 43: Bedakan pronoun subjek vs objek (terutama setelah preposisi 'between you and me'). Skill 44: Possessive adjective (its/their) diikuti noun; possessive pronoun (theirs) berdiri sendiri. Skill 45: Pronoun harus cocok jumlahnya dengan kata yang dirujuk.", trap: "Tertukar antara 'its' (kepunyaan) dengan 'it's' (it is).", qType: "WE", sentenceParts: ["Each", "student", "must", "submit", "their", "own", "research proposal."], underlined: [0, 2, 4, 6], ans: 2, exp: "Skill 45: 'Each student' bersifat tunggal, maka pronoun rujukannya dalam tata bahasa TOEFL formal harus tunggal ('his or her')." },
+    { id: 46, grp: "M. Adjectives and Adverbs (46-51)", title: "Skills 46-51: Adjectives, Adverbs, Linking Verbs & -ed/-ing", formula: "Adj -> Noun | Adv -> Verb / Adj / Adv | Linking Verb + Adj", tokens: "<span class='tok-s'>She</span> <span class='tok-v'>speaks</span> <span class='tok-cl'>remarkably well</span>.", rule: "Skill 46: Adjective menjelaskan Noun; Adverb menjelaskan Verb/Adj/Adv. Skill 47: Setelah linking verb (appear, feel, look, seem, smell, taste, sound) gunakan Adjective. Skill 48: Posisi Adj sebelum Noun. Skill 49: Kata berakhiran -ly yang merupakan Adjective (friendly, costly, likely). Skill 50: Predicate Adj (alike, alive, alone). Skill 51: -ed (perasaan) vs -ing (penyebab).", trap: "Memakai 'well' setelah linking verb ('The soup smells well' -> harus 'good').", qType: "WE", sentenceParts: ["The", "freshly", "baked", "bread", "smelled", "wonderfully", "in the kitchen."], underlined: [1, 2, 4, 5], ans: 3, exp: "Skill 47: 'smelled' adalah linking verb, sehingga harus diikuti Adjective 'wonderful', bukan Adverb 'wonderfully'." },
+    { id: 52, grp: "N. Articles (52-55)", title: "Skills 52-55: A, An, The with Singular, Plural & Uncountable Nouns", formula: "Singular Countable Noun WAJIB pakai Determiner (a/an/the/my/this)", tokens: "<span class='tok-s'>A university</span> <span class='tok-v'>offers</span> <span class='tok-cl'>an honest</span> education.", rule: "Skill 52: Singular countable noun tidak boleh berdiri telanjang tanpa a/an/the/my/this. Skill 53: 'A' untuk bunyi konsonan (a university, a European); 'An' untuk bunyi vokal (an hour, an umbrella). Skill 54: General vs Specific. Skill 55: Penggunaan 'the' untuk hal spesifik/unik.", trap: "Memakai 'an university' karena melihat huruf 'u' padahal bunyinya /y/ (konsonan).", qType: "WE", sentenceParts: ["It", "took", "us", "more than", "a", "hour", "to reach the airport."], underlined: [1, 3, 4, 6], ans: 2, exp: "Skill 53: Kata 'hour' diawali bunyi vokal /aʊər/ (huruf 'h' tidak dibaca), sehingga harus memakai 'an hour'." },
+    { id: 56, grp: "O. Prepositions (56-57)", title: "Skills 56-57: Incorrect Prepositions & Omitted Prepositions", formula: "depend on | interested in | consist of | agree with", tokens: "<span class='tok-s'>Success</span> <span class='tok-v'>depends on</span> <span class='tok-cl'>careful preparation</span>.", rule: "Skill 56: Pasangan preposisi idiom harus tepat (misal: depend on, bukan depend in; responsible for, bukan responsible of). Skill 57: Jangan hilangkan preposisi yang wajib ada setelah verb/adjective tertentu.", trap: "Menerjemahkan preposisi dari Bahasa Indonesia ('depend from/of' -> harus 'depend on').", qType: "WE", sentenceParts: ["The", "final", "outcome", "will", "depend", "in", "the weather conditions."], underlined: [1, 2, 4, 5], ans: 3, exp: "Skill 56: Kata kerja 'depend' berpasangan dengan preposisi 'on' ('depend on'), bukan 'in'." },
+    { id: 58, grp: "P. Usage (58-60)", title: "Skills 58-60: Make vs Do, Like/Alike/Unlike, Other/Another", formula: "Make (create/produce) vs Do (perform/work) | Another + Singular | Other + Plural", tokens: "<span class='tok-s'>She</span> <span class='tok-v'>made</span> <span class='tok-cl'>a mistake</span> while <span class='tok-cl'>doing</span> her homework.", rule: "Skill 58: Make (menciptakan/memutuskan: make a decision, make progress) vs Do (mengerjakan tugas: do homework, do research). Skill 59: Like (preposisi + Noun) vs Alike (predicate adj di akhir klausa). Skill 60: Another + Singular; Other + Plural; The other (sisa spesifik).", trap: "Memakai 'another' sebelum kata benda jamak ('another books' -> harus 'other books').", qType: "WE", sentenceParts: ["Would", "you", "mind", "giving", "me", "another", "examples", "of this rule?"], underlined: [2, 3, 5, 6], ans: 2, exp: "Skill 60: Karena 'examples' berbentuk jamak, gunakan 'other' (atau 'more'), bukan 'another' yang hanya untuk kata benda tunggal." }
+  ];
+
+  // ALL 14 READING SKILLS (pp. 368–451) — Groups A–E
+  const READING_SKILLS = [
+    { id: 1, grp: "Group A: Ideas of the Passage (1-2)", title: "Skill 1 & 2: Main Idea & Organization of Ideas", page: "pp. 368-378", tip: "Baca kalimat pertama setiap paragraf untuk menemukan topik utama dan pola organisasi teks (chronological, cause-effect, compare-contrast).", passage: "The <span class='hl'>development of the telegraph in the 1830s</span> revolutionized long-distance communication. Before its invention, messages traveled only as fast as horses or ships could carry them. <span class='hl'>By transmitting electrical pulses over wires</span>, Samuel Morse enabled near-instantaneous news delivery across continents.", q: "What is the main topic of the passage?", opts: ["The biography of Samuel Morse", "The impact of the telegraph on communication speed", "How horses were trained to carry mail", "The invention of modern fiber optics"], ans: 1, exp: "Kalimat pertama dan kedua menyoroti bagaimana telegraf merevolusi kecepatan komunikasi jarak jauh." },
+    { id: 3, grp: "Group B: Directly Answered Questions (3-5)", title: "Skills 3, 4 & 5: Stated Detail, Unstated Detail & Pronoun Referents", page: "pp. 382-398", tip: "Skill 3: Cari kata kunci di teks lalu baca kalimat lengkapnya. Skill 4 (NOT/EXCEPT): Tiga opsi benar di teks, satu tidak disebut/salah. Skill 5 (Pronoun): Baca kalimat SEBELUM pronoun untuk menemukan kata benda rujukannya.", passage: "Although <span class='hl'>bats</span> are often feared by humans, <span class='hl'>they</span> play an essential ecological role. Most species consume vast quantities of nocturnal insects, thereby protecting agricultural crops without chemical pesticides.", q: "In the passage, the pronoun 'they' refers to:", opts: ["humans", "bats", "insects", "crops"], ans: 1, exp: "Skill 5: Kata ganti jamak 'they' merujuk langsung pada subjek klausa sebelumnya, yaitu 'bats'." },
+    { id: 6, grp: "Group C: Indirectly Answered Questions (6-7)", title: "Skills 6 & 7: Implied Detail & Transition Questions", page: "pp. 402-412", tip: "Skill 6 (Implied/Inferred): Tarik kesimpulan logis yang pasti benar berdasarkan fakta di teks. Skill 7 (Transition): Preceding paragraph -> lihat kalimat pertama paragraf 1; Following paragraph -> lihat kalimat terakhir paragraf terakhir.", passage: "The Hawaiian silversword plant grows exclusively on the volcanic slopes of Maui and Hawaii at elevations above 7,000 feet. <span class='hl'>It blooms only once in its lifetime, after which the entire plant dies.</span>", q: "Which of the following is most likely discussed in the paragraph FOLLOWING this passage?", opts: ["The volcanic origins of Maui", "How the silversword disperses seeds before dying", "Lowland tropical rainforests", "Tourism regulations in Hawaii"], ans: 1, exp: "Skill 7 (Transition): Kalimat terakhir membahas bagaimana tanaman berbunga sekali lalu mati, sehingga paragraf berikutnya paling logis membahas cara penyebaran bijinya." },
+    { id: 8, grp: "Group D: Vocabulary Questions (8-11)", title: "Skills 8–11: Structural Clues, Word Parts & Context Clues", page: "pp. 416-434", tip: "Skill 8: Gunakan tanda baca definisi (koma, tanda pisah —, 'or', 'that is'). Skill 9: Pecah awalan/akar kata (misal: 'subterranean' = sub [bawah] + terra [tanah]). Skill 10-11: Tebak makna dari konteks kalimat sekitarnya.", passage: "Many desert amphibians survive prolonged droughts through <span class='hl'>estivation—a state of summer dormancy</span> similar to winter hibernation—buried deep beneath dry lakebeds.", q: "The word 'estivation' in the passage is closest in meaning to:", opts: ["rapid migration", "summer dormancy", "nocturnal hunting", "aquatic reproduction"], ans: 1, exp: "Skill 8 (Structural Clue): Tanda pisah (—) langsung memberikan definisi eksplisit yaitu 'a state of summer dormancy'." },
+    { id: 12, grp: "Group E: Overall Review Questions (12-14)", title: "Skills 12–14: Where in the Passage, Tone/Course & Sentence Insertion [■]", page: "pp. 438-451", tip: "Skill 12: Temukan baris/kalimat bukti spesifik. Skill 13: Tentukan nada penulis (objective, informative) atau mata kuliah terkait. Skill 14 (CBT Sentence Insertion): Cocokkan kata transisi ('However', 'This process', 'These') dengan kalimat sebelum dan sesudah kotak [■].", passageWithSlots: "Early astronomers believed that all celestial bodies orbited the Earth in perfect circles. [1] Galileo's telescopic observations of Jupiter's moons challenged this geocentric view. [2] He demonstrated that smaller bodies could orbit a planet other than Earth. [3] Consequently, the heliocentric model gained crucial empirical support. [4]", insertSentence: "To test this assumption, he built an improved refracting telescope in 1609.", correctSlot: 1, exp: "Skill 14: Kata 'this assumption' merujuk pada keyakinan astronom awal pada kalimat pertama, dan 'he built an improved... telescope' mendahului 'Galileo's telescopic observations' di kalimat kedua, sehingga posisi paling logis adalah slot [1]." }
+  ];
+
+  // 8 WRITING SKILLS + RUBRIC + PROMPTS (pp. 473–512)
+  const WRITING_SKILLS = [
+    { id: 1, title: "Skill 1: Decode the Topic", desc: "Identifikasi apakah prompt meminta Agree/Disagree, Compare Two Views, atau Describe a Preference/Characteristic. Jawab SEMUA bagian prompt." },
+    { id: 2, title: "Skill 2: Develop Supporting Ideas", desc: "Gunakan teknik brainstorming cepat (2-3 menit) untuk menyiapkan 2–3 alasan utama beserta contoh konkret untuk masing-masing alasan." },
+    { id: 3, title: "Skill 3: Write the Introductory Paragraph", desc: "Mulai dengan latar belakang umum (hook), persempit ke isu utama, dan tutup paragraf pembuka dengan Thesis Statement yang jelas." },
+    { id: 4, title: "Skill 4: Write Unified Supporting Paragraphs", desc: "Setiap paragraf isi dimulai dengan Topic Sentence yang mengacu pada Thesis, diikuti 2–3 kalimat detail/contoh yang relevan." },
+    { id: 5, title: "Skill 5: Write the Concluding Paragraph", desc: "Parafrase ulang Thesis Statement (jangan copy-paste persis), rangkum poin utama, dan tutup dengan pemikiran akhir yang berkesan." },
+    { id: 6, title: "Skill 6: Connect the Supporting Paragraphs", desc: "Gunakan kata transisi antarkalimat dan antarparagraf (First of all, Furthermore, In contrast, Consequently, In conclusion)." },
+    { id: 7, title: "Skill 7: Use Correct Sentence Structure", desc: "Variasikan Simple, Compound (FANBOYS), dan Complex Sentences; hindari fragment (kalimat tanpa verb) dan run-on sentence." },
+    { id: 8, title: "Skill 8: Use Correct Grammar", desc: "Sisakan 3 menit terakhir untuk memeriksa Subject-Verb Agreement, tenses, singular/plural nouns, dan artikel (a/an/the)." }
+  ];
+
+  const WRITING_PROMPTS = [
+    "Do you agree or disagree with the following statement? Universities should give the same amount of money to their students' sports activities as they give to their university libraries. Use specific reasons and examples to support your opinion.",
+    "Some people prefer to work for a large company. Others prefer to work for a small company. Which would you prefer? Use specific reasons and details to support your choice.",
+    "Neighbors are the people who live near us. In your opinion, what are the qualities of a good neighbor? Use specific details and examples in your answer."
+  ];
+
+  // APPENDICES A–I (pp. 565–600)
+  const APPENDICES = {
+    A: { name: "Appendix A: Similar Sounds", rows: [["accept / except", "menerima / kecuali"], ["affect / effect", "memengaruhi (V) / dampak (N)"], ["principal / principle", "kepala sekolah/utama / prinsip"], ["stationary / stationery", "diam tidak bergerak / alat tulis"]] },
+    B: { name: "Appendix B: Two- and Three-Part Verbs", rows: [["call off", "cancel (membatalkan)"], ["put off", "postpone / delay (menunda)"], ["look into", "investigate (menyelidiki)"], ["run out of", "exhaust supply (kehabisan)"], ["come up with", "think of / produce an idea (menemukan ide)"]] },
+    C: { name: "Appendix C: Idioms", rows: [["a piece of cake", "very easy (sangat mudah)"], ["once in a blue moon", "very rarely (sangat jarang)"], ["under the weather", "feeling slightly sick (kurang enak badan)"], ["hit the nail on the head", "be exactly right (tepat sekali)"]] },
+    D: { name: "Appendix D: Prepositions", rows: [["according to", "menurut"], ["capable of", "mampu melakukan"], ["consist of", "terdiri dari"], ["dependent on / rely on", "bergantung pada"], ["interested in", "tertarik pada"]] },
+    E: { name: "Appendix E: Word Endings (Parts of Speech)", rows: [["Noun Endings", "-tion, -ment, -ness, -ity, -ance, -ence, -ism"], ["Adjective Endings", "-able, -ible, -al, -ful, -ic, -ive, -ous, -less"], ["Adverb Endings", "-ly (quickly, carefully, significantly)"], ["Verb Endings", "-ate, -en, -ify, -ize"]] },
+    F: { name: "Appendix F: Irregular Verb Forms", rows: [["arise - arose - arisen", "muncul / timbul"], ["bear - bore - borne", "menanggung / melahirkan"], ["lay - laid - laid", "meletakkan (+ objek)"], ["lie - lay - lain", "berbaring (tanpa objek)"], ["shrink - shrank - shrunk", "menyusut"]] },
+    G: { name: "Appendix G: Formation of the Passive", rows: [["Simple Present", "is / am / are + V3"], ["Simple Past", "was / were + V3"], ["Present Perfect", "has / have been + V3"], ["Modal Passive", "can / must / will + be + V3"]] },
+    H: { name: "Appendix H: Irregular Plurals", rows: [["criterion -> criteria", "kriteria (tunggal -> jamak)"], ["phenomenon -> phenomena", "fenomena"], ["analysis -> analyses", "analisis"], ["datum -> data", "data"], ["alumnus -> alumni", "alumni"]] },
+    I: { name: "Appendix I: Word Parts (Prefixes, Roots, Suffixes)", rows: [["bene- (good/well)", "beneficial, benevolent"], ["contra- (against)", "contradict, contrary"], ["cred- (believe)", "credible, credentials"], ["port- (carry)", "transport, portable"], ["spect- (look/see)", "inspect, spectator"]] }
+  };
+
+  const FLASHCARDS = [
+    { term: "ubiquitous", pos: "Adjective", def: "Ada di mana-mana secara bersamaan (omnipresent).", ex: "Smartphones have become ubiquitous in modern society." },
+    { term: "mitigate", pos: "Verb", def: "Mengurangi tingkat keparahan atau dampak buruk.", ex: "Wetlands help mitigate the effects of coastal flooding." },
+    { term: "ameliorate", pos: "Verb", def: "Memperbaiki atau membuat keadaan yang buruk menjadi lebih baik.", ex: "New policies were introduced to ameliorate working conditions." },
+    { term: "ephemeral", pos: "Adjective", def: "Berlangsung sangat singkat; fana.", ex: "Desert wildflowers are ephemeral, blooming for only a few days." },
+    { term: "corroborate", pos: "Verb", def: "Mengonfirmasi atau mendukung suatu teori/temuan dengan bukti.", ex: "Recent archaeological finds corroborate the historian's hypothesis." },
+    { term: "anomaly", pos: "Noun", def: "Sesuatu yang menyimpang dari pola standar atau normal.", ex: "Scientists investigated the temperature anomaly in the Pacific Ocean." },
+    { term: "proliferate", pos: "Verb", def: "Bertambah banyak dengan cepat; menyebar luas.", ex: "Small businesses began to proliferate along the new railway." },
+    { term: "scrutinize", pos: "Verb", def: "Memeriksa atau mengamati secara sangat cermat dan kritis.", ex: "Auditors will scrutinize every financial record." }
+  ];
+
+  // PRACTICE BANK (Mixed Sections)
+  const PRACTICE_BANK = [
+    { sec: "Listening", skillRef: "Listening Skill 7 (Negatives)", q: "[Audio Transcript] Woman: 'Did you enjoy the symphony concert last night?' — Man: 'I couldn't have been more impressed by the orchestra!' What does the man mean?", opts: ["He was disappointed by the orchestra.", "He thought the orchestra was extraordinary.", "He could not attend the concert.", "He left before the symphony ended."], ans: 1, exp: "Pernyataan negatif + komparatif ('couldn't have been more impressed') bermakna superlatif positif: ia sangat terkesan." },
+    { sec: "Structure", skillRef: "Structure Skill 2 (Object of Preposition)", q: "In the northern hemisphere, _____ the shortest day of the year occurs around December 21.", opts: ["which", "it is", "when", "the winter solstice,"], ans: 3, exp: "'In the northern hemisphere' adalah frasa preposisi; 'occurs' adalah verb. Kalimat butuh subjek 'the winter solstice,' (dengan koma appositive opsional sebelum verb)." },
+    { sec: "Structure", skillRef: "Structure Skill 17 (Negative Inversion)", q: "Rarely _____ located near city airports due to noise regulations.", opts: ["residential areas are", "are residential areas", "residential areas", "is residential areas"], ans: 1, exp: "'Rarely' (hampir negatif) di awal kalimat memicu inversi Verb + Subject jamak: 'are residential areas'." },
+    { sec: "Written Expression", skillRef: "Structure Skill 20 (Subject-Verb Agreement)", q: "Identify the error: 'The discovery of ancient fossils in the desert regions have changed our understanding of early mammals.'", opts: ["discovery", "ancient fossils", "have changed", "understanding"], ans: 2, exp: "Subjek utamanya adalah kata benda tunggal 'The discovery' (bukan 'fossils' yang berada dalam frasa preposisi), sehingga verb harus 'has changed'." },
+    { sec: "Written Expression", skillRef: "Structure Skill 40 (Uncountable Nouns)", q: "Identify the error: 'Engineers gathered valuable informations from the satellite sensors before launching the probe.'", opts: ["gathered", "valuable", "informations", "before launching"], ans: 2, exp: "'Information' adalah uncountable noun dan tidak pernah menggunakan akhiran '-s'." },
+    { sec: "Reading", skillRef: "Reading Skill 8 (Structural Context Clues)", q: "Passage: 'Unlike diurnal animals that hunt during daylight hours, owls are strictly nocturnal predators.' What does 'diurnal' mean?", opts: ["Active during the day", "Living in forests", "Feeding on plants", "Migrating seasonally"], ans: 0, exp: "Petunjuk kontras 'Unlike... that hunt during daylight hours' menjelaskan bahwa 'diurnal' berarti aktif di siang hari." }
+  ];
+
+  // =========================================================================
+  // 4. SCORE CONVERSION & HELPERS
+  // =========================================================================
+  function getEstimatedScores() {
+    const totalSkills = LISTENING_SKILLS.length + STRUCTURE_SKILLS.length + READING_SKILLS.length + WRITING_SKILLS.length;
+    const pct = state.masteredSkills.length / totalSkills;
+    const acc = state.practiceStats.attempted > 0 ? (state.practiceStats.correct / state.practiceStats.attempted) : 0.65;
+    const base = 420 + Math.round((pct * 150) + (acc * 107));
+    const pbt = Math.min(677, Math.max(310, base));
+    const cbt = Math.min(300, Math.max(40, Math.round((pbt - 310) * (300 / 367))));
+    return { pbt, cbt, totalSkills };
+  }
+
+  function updateTopbar() {
+    const { pbt, cbt, totalSkills } = getEstimatedScores();
+    document.getElementById("hdr-mastered").textContent = `Mastered: ${state.masteredSkills.length} / ${totalSkills} Skills`;
+    document.getElementById("hdr-score").textContent = `Est. PBT: ${pbt} | CBT: ${cbt}`;
+    document.getElementById("hdr-storage").textContent = `Storage: ${storageMode}`;
+  }
+
+  function logMistake(item) {
+    const exists = state.mistakes.some(m => m.q === item.q);
+    if (!exists) {
+      state.mistakes.unshift({
+        id: Date.now(),
+        sec: item.sec,
+        skillRef: item.skillRef,
+        q: item.q,
+        userAns: item.userAns,
+        correctAns: item.correctAns,
+        exp: item.exp,
+        date: new Date().toLocaleDateString("id-ID")
+      });
+      saveState();
+    }
+  }
+
+  // =========================================================================
+  // 5. MODULE RENDERERS (ALL 12 MODULES)
+  // =========================================================================
+
+  function renderDashboard() {
+    const { pbt, cbt, totalSkills } = getEstimatedScores();
+    const pct = Math.round((state.masteredSkills.length / totalSkills) * 100);
+    const lCount = state.masteredSkills.filter(c => c.startsWith("L")).length;
+    const sCount = state.masteredSkills.filter(c => c.startsWith("S")).length;
+    const rCount = state.masteredSkills.filter(c => c.startsWith("R")).length;
+    const wCount = state.masteredSkills.filter(c => c.startsWith("W")).length;
+
+    return `
+      <div class="callout callout-teal mb-3">
+        <strong>Selamat Datang di TOEFL Learning Companion (Google Sites Edition)!</strong> Semua modul disusun sesuai buku <em>Longman Complete Course for the TOEFL Test</em> (Deborah Phillips, 2001). Klik skill yang sudah Anda kuasai untuk memantau kenaikan estimasi skor PBT &amp; CBT secara otomatis.
+      </div>
+
+      <div class="grid-4 mb-3">
+        <div class="card">
+          <div class="card-sub">Progres Penguasaan Materi</div>
+          <div class="card-title" style="font-size:22px; margin:4px 0;">${pct}% <span style="font-size:13px; color:var(--text-muted);">(${state.masteredSkills.length}/${totalSkills})</span></div>
+          <div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div>
+          <div class="card-sub">Target: Kuasai Fondasi Structure 1–19 dulu</div>
+        </div>
+        <div class="card">
+          <div class="card-sub">Estimasi Skor PBT (Skala 217–677)</div>
+          <div class="card-title" style="font-size:24px; color:var(--primary-light); margin:4px 0;">${pbt}</div>
+          <div class="card-sub">Paper-Based Test (Format 1995)</div>
+        </div>
+        <div class="card">
+          <div class="card-sub">Estimasi Skor CBT (Skala 0–300)</div>
+          <div class="card-title" style="font-size:24px; color:var(--accent); margin:4px 0;">${cbt}</div>
+          <div class="card-sub">Computer-Based Test (Format 1998)</div>
+        </div>
+        <div class="card">
+          <div class="card-sub">Akurasi Latihan &amp; Log Kesalahan</div>
+          <div class="card-title" style="font-size:22px; margin:4px 0;">${state.practiceStats.attempted > 0 ? Math.round((state.practiceStats.correct / state.practiceStats.attempted) * 100) : 0}%</div>
+          <div class="card-sub">${state.practiceStats.correct}/${state.practiceStats.attempted} Benar • ${state.mistakes.length} Kesalahan Tercatat</div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Rekomendasi Belajar Prioritas (Metode Deborah Phillips)</div>
+            <div class="card-sub">Mulai dari struktur klausa inti sebelum beralih ke aturan tata bahasa lanjutan</div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="switchTab('structure')">Mulai Structure Skill 1 →</button>
+        </div>
+        <div class="callout callout-amber">
+          <strong>Langkah 1 (Fondasi Wajib):</strong> Selesaikan <strong>Structure Skills 1–19</strong> (One Clause, Multiple Clauses, Reduced Clauses, &amp; Inversions) karena 60% soal Structure TOEFL bertumpu pada identifikasi <em>Subject, Verb, dan Connector</em>.
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <div class="card">
+          <span class="badge b-blue">SECTION 1</span>
+          <div class="card-title mt-2">Listening Comprehension</div>
+          <p class="card-sub mt-2">34 Skills lengkap: Short Dialogues, Long Conversations, Long Talks, &amp; CBT Academic Discussions.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:${Math.round((lCount/LISTENING_SKILLS.length)*100)}%"></div></div>
+          <button class="btn btn-sm mt-2" onclick="switchTab('listening')">Buka Modul (${lCount}/${LISTENING_SKILLS.length})</button>
+        </div>
+        <div class="card">
+          <span class="badge b-purple">SECTION 2</span>
+          <div class="card-title mt-2">Structure &amp; Written Expression</div>
+          <p class="card-sub mt-2">Seluruh 60 Skills (Grup A–R) dengan penandaan warna Subject, Verb, Connector, &amp; Clause.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:${Math.round((sCount/STRUCTURE_SKILLS.length)*100)}%"></div></div>
+          <button class="btn btn-sm mt-2" onclick="switchTab('structure')">Buka Modul (${sCount}/${STRUCTURE_SKILLS.length})</button>
+        </div>
+        <div class="card">
+          <span class="badge b-teal">SECTION 3</span>
+          <div class="card-title mt-2">Reading Comprehension</div>
+          <p class="card-sub mt-2">14 Skills (Grup A–E) dengan sorotan kalimat bukti, Pronoun Referent, &amp; Sentence Insertion.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:${Math.round((rCount/READING_SKILLS.length)*100)}%"></div></div>
+          <button class="btn btn-sm mt-2" onclick="switchTab('reading')">Buka Modul (${rCount}/${READING_SKILLS.length})</button>
+        </div>
+        <div class="card">
+          <span class="badge b-amber">SECTION 4</span>
+          <div class="card-title mt-2">Writing (TWE / CBT Essay)</div>
+          <p class="card-sub mt-2">8 Skills menulis esai 30 menit, rubrik skor 1–6, Essay Planner, &amp; latihan penyuntingan.</p>
+          <div class="progress-track"><div class="progress-fill" style="width:${Math.round((wCount/WRITING_SKILLS.length)*100)}%"></div></div>
+          <button class="btn btn-sm mt-2" onclick="switchTab('writing')">Buka Modul (${wCount}/${WRITING_SKILLS.length})</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderFundamentals() {
+    return `
+      <div class="card mb-3">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 2 — TOEFL Fundamentals (pp. xi–xx)</div>
+            <div class="card-sub">Perbandingan Format Paper-Based Test (PBT 1995), Computer-Based Test (CBT 1998), &amp; TOEFL iBT Modern</div>
+          </div>
+          <span class="badge b-blue">Orientasi Ujian</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Aspek Ujian</th>
+              <th>TOEFL PBT (Paper-Based, 1995)</th>
+              <th>TOEFL CBT (Computer-Based, 1998)</th>
+              <th>Catatan TOEFL iBT Modern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Skala Skor Total</strong></td>
+              <td><strong>217 – 677</strong> (Writing TWE terpisah 1–6)</td>
+              <td><strong>0 – 300</strong> (Writing terintegrasi ke Structure)</td>
+              <td><strong>0 – 120</strong> (Skala baru 1–6 per 2026)</td>
+            </tr>
+            <tr>
+              <td><strong>Listening</strong></td>
+              <td>50 soal (30–40 menit) — Linear</td>
+              <td>30–50 soal (40–60 menit) — Computer-Adaptive + Visual</td>
+              <td>Academic Lectures &amp; Campus Conversations (tanpa Short Dialogues)</td>
+            </tr>
+            <tr>
+              <td><strong>Structure</strong></td>
+              <td>40 soal (25 menit): 15 Completion + 25 Written Expression</td>
+              <td>20–25 soal (15–20 menit) — Computer-Adaptive</td>
+              <td>Tidak ada section Structure terpisah (diuji lewat Speaking/Writing)</td>
+            </tr>
+            <tr>
+              <td><strong>Reading</strong></td>
+              <td>50 soal (55 menit) — 5 bacaan akademik</td>
+              <td>44–55 soal (70–90 menit) + klik rujukan &amp; sisip kalimat</td>
+              <td>Bacaan akademik + soal ringkasan &amp; kosakata kontekstual</td>
+            </tr>
+            <tr>
+              <td><strong>Writing</strong></td>
+              <td>TWE: 1 esai (30 menit), skor 1.0 – 6.0</td>
+              <td>1 esai wajib (30 menit), menyumbang 50% skor Structure/Writing</td>
+              <td>Integrated Writing + Writing for an Academic Discussion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title mb-2">Tabel Konversi Skor Buku Longman (Appendix / Introduction)</div>
+        <p class="card-sub mb-3">Rumus PBT: <code>((Converted Listening + Converted Structure + Converted Reading) × 10) ÷ 3</code></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Jumlah Jawaban Benar (Raw)</th>
+              <th>Listening Converted</th>
+              <th>Structure Converted</th>
+              <th>Reading Converted</th>
+              <th>Estimasi Total PBT</th>
+              <th>Estimasi Total CBT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>90% – 100% Benar</strong></td><td>64 – 68</td><td>65 – 68</td><td>63 – 67</td><td><strong>640 – 677</strong></td><td><strong>273 – 300</strong></td></tr>
+            <tr><td><strong>75% – 89% Benar</strong></td><td>55 – 63</td><td>56 – 64</td><td>55 – 62</td><td><strong>553 – 630</strong></td><td><strong>217 – 267</strong></td></tr>
+            <tr><td><strong>60% – 74% Benar</strong></td><td>48 – 54</td><td>48 – 55</td><td>48 – 54</td><td><strong>480 – 543</strong></td><td><strong>157 – 210</strong></td></tr>
+            <tr><td><strong>45% – 59% Benar</strong></td><td>41 – 47</td><td>40 – 47</td><td>41 – 47</td><td><strong>407 – 470</strong></td><td><strong>100 – 150</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderListening() {
+    const cats = ["ALL", ...new Set(LISTENING_SKILLS.map(s => s.cat))];
+    const filtered = state.lFilter === "ALL" ? LISTENING_SKILLS : LISTENING_SKILLS.filter(s => s.cat === state.lFilter);
+    const active = filtered.find(s => s.id === state.lSelectedId) || filtered[0];
+    const code = "L" + active.id;
+    const isMastered = state.masteredSkills.includes(code);
+
+    return `
+      <div class="card mb-3">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 3 — Listening Masterclass (Seluruh 34 Skills, pp. 22–164)</div>
+            <div class="card-sub">Filter berdasarkan 6 kategori buku Longman &amp; latih telinga tanpa melihat transkrip terlebih dahulu</div>
+          </div>
+          <span class="badge b-blue">${active.cat}</span>
+        </div>
+        <div class="pill-row">
+          ${cats.map(c => `<button class="pill ${state.lFilter === c ? 'active' : ''}" onclick="setLFilter('${c}')">${c}</button>`).join("")}
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title mb-2">Daftar Skills (${filtered.length} item)</div>
+          <div class="skill-list">
+            ${filtered.map(s => `
+              <div class="skill-item ${s.id === active.id ? 'active' : ''}" onclick="selectLSkill(${s.id})">
+                <div>
+                  <strong>${s.title}</strong>
+                  <div class="card-sub">${s.cat} • ${s.page}</div>
+                </div>
+                <span class="badge ${state.masteredSkills.includes('L'+s.id) ? 'b-teal' : 'b-blue'}">${state.masteredSkills.includes('L'+s.id) ? '✓ Mastered' : 'Pelajari'}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flex-between mb-2">
+            <div>
+              <span class="badge b-purple">${active.page}</span>
+              <h3 class="card-title mt-2">${active.title}</h3>
+            </div>
+            <button class="btn btn-sm ${isMastered ? 'btn-teal' : ''}" onclick="toggleMastered('${code}')">
+              ${isMastered ? '✓ Sudah Dikuasai' : 'Tandai Mastered'}
+            </button>
+          </div>
+
+          <div class="callout">
+            <strong>Strategi Inti Longman:</strong> ${active.tip}
+          </div>
+
+          <div class="mt-3 p-3" style="background:var(--surface-alt); border:1px solid var(--border); border-radius:10px; padding:12px;">
+            <div class="flex-between mb-2">
+              <strong>Simulasi Audio &amp; Transkrip</strong>
+              <div style="display:flex; gap:6px;">
+                <button class="btn btn-primary btn-sm" onclick="playListeningAudio(${active.id})">▶ Putar Suara (TTS)</button>
+                <button class="btn btn-sm" onclick="toggleLTranscript()">${state.lShowTranscript ? 'Sembunyikan Transkrip' : 'Tampilkan Transkrip'}</button>
+              </div>
+            </div>
+            ${state.lShowTranscript
+              ? `<pre style="white-space:pre-wrap; font-family:inherit; background:#fff; padding:10px; border-radius:6px; border:1px solid var(--border);">${active.dialogue}</pre>`
+              : `<p class="card-sub"><em>Transkrip disembunyikan untuk simulasi ujian sungguhan. Klik "Putar Suara" atau "Tampilkan Transkrip".</em></p>`
+            }
+          </div>
+
+          ${active.id === 29 ? `
+            <div class="mt-3" style="background:#f0fdfa; border:1px solid #99f6e4; border-radius:10px; padding:12px;">
+              <strong>Diagram CBT Skill 31: Process Sequence (Cacao Tree → Chocolate)</strong>
+              <svg viewBox="0 0 520 75" style="width:100%; height:auto; margin-top:8px;">
+                <rect x="5" y="12" width="110" height="46" rx="8" fill="#0d9488"/>
+                <text x="60" y="39" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">1. Harvest Pods</text>
+                <text x="128" y="40" fill="#0f172a" font-size="16" font-weight="bold">→</text>
+                <rect x="142" y="12" width="120" height="46" rx="8" fill="#0284c7"/>
+                <text x="202" y="39" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">2. Ferment &amp; Dry</text>
+                <text x="275" y="40" fill="#0f172a" font-size="16" font-weight="bold">→</text>
+                <rect x="288" y="12" width="110" height="46" rx="8" fill="#4f46e5"/>
+                <text x="343" y="39" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">3. Roast Beans</text>
+                <text x="411" y="40" fill="#0f172a" font-size="16" font-weight="bold">→</text>
+                <rect x="424" y="12" width="90" height="46" rx="8" fill="#7c3aed"/>
+                <text x="469" y="39" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">4. Grind Liquor</text>
+              </svg>
+            </div>
+          ` : ''}
+
+          <div class="mt-3">
+            <strong>Latihan Soal (${active.title}):</strong>
+            <p class="mt-2 mb-2">${active.q}</p>
+            <div id="l-quiz-opts">
+              ${active.opts.map((o, idx) => `<button class="opt-btn" onclick="checkSkillQuiz(this, ${idx}, ${active.ans}, 'Listening', '${active.title}', \`${active.q.replace(/`/g, "'")}\`, ${JSON.stringify(active.opts).replace(/"/g, '&quot;')}, \`${active.exp.replace(/`/g, "'")}\`, 'l-quiz-exp')">${String.fromCharCode(65+idx)}. ${o}</button>`).join("")}
+            </div>
+            <div id="l-quiz-exp" class="hidden callout callout-teal mt-2"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderStructure() {
+    const groups = ["ALL", ...new Set(STRUCTURE_SKILLS.map(s => s.grp))];
+    const filtered = STRUCTURE_SKILLS.filter(s => {
+      const gOk = state.sGroupFilter === "ALL" || s.grp === state.sGroupFilter;
+      const qOk = !state.sSearch || s.title.toLowerCase().includes(state.sSearch.toLowerCase()) || s.rule.toLowerCase().includes(state.sSearch.toLowerCase());
+      return gOk && qOk;
+    });
+    const active = filtered.find(s => s.id === state.sSelectedId) || filtered[0] || STRUCTURE_SKILLS[0];
+    const code = "S" + active.id;
+    const isMastered = state.masteredSkills.includes(code);
+
+    return `
+      <div class="card mb-3">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 4 — Structure Masterclass (Cakupan Lengkap Skills 1–60, Grup A–R)</div>
+            <div class="card-sub">Legenda Warna: <span class="tok-s">Subject</span> <span class="tok-v">Verb</span> <span class="tok-c">Connector</span> <span class="tok-p">Prep. Phrase</span> <span class="tok-cl">Clause / Modifier</span></div>
+          </div>
+          <div style="width:240px;">
+            <input type="text" placeholder="Cari skill (misal: inversion, passive)..." value="${state.sSearch}" oninput="setSSearch(this.value)" />
+          </div>
+        </div>
+        <div class="pill-row">
+          ${groups.map(g => `<button class="pill ${state.sGroupFilter === g ? 'active' : ''}" onclick="setSGroup('${g}')">${g}</button>`).join("")}
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title mb-2">Katalog Grammar Longman (${filtered.length} topik)</div>
+          <div class="skill-list">
+            ${filtered.map(s => `
+              <div class="skill-item ${s.id === active.id ? 'active' : ''}" onclick="selectSSkill(${s.id})">
+                <div>
+                  <strong>${s.title}</strong>
+                  <div class="card-sub">${s.grp} • Tipe: ${s.qType === 'SC' ? 'Structure Completion' : 'Written Expression'}</div>
+                </div>
+                <span class="badge ${state.masteredSkills.includes('S'+s.id) ? 'b-teal' : 'b-purple'}">${state.masteredSkills.includes('S'+s.id) ? '✓ Mastered' : 'Stage ' + state.sStage + '/6'}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flex-between mb-2">
+            <div>
+              <span class="badge b-purple">${active.grp}</span>
+              <h3 class="card-title mt-2">${active.title}</h3>
+            </div>
+            <button class="btn btn-sm ${isMastered ? 'btn-teal' : ''}" onclick="toggleMastered('${code}')">
+              ${isMastered ? '✓ Mastered' : 'Tandai Mastered'}
+            </button>
+          </div>
+
+          <!-- 6-Stage Learning Flow Bar -->
+          <div class="pill-row mt-2">
+            ${["1. Rumus", "2. Bedah Warna", "3. Aturan Inti", "4. Jebakan", "5. Latihan", "6. Master"].map((st, i) => `
+              <button class="pill ${state.sStage === i+1 ? 'active' : ''}" onclick="setSStage(${i+1})">${st}</button>
+            `).join("")}
+          </div>
+
+          <div class="callout">
+            <strong>Rumus Pola Kalimat:</strong> <code>${active.formula}</code>
+          </div>
+
+          <div style="background:#f8fafc; border:1px solid var(--border); padding:12px; border-radius:8px; margin:10px 0; font-size:15px;">
+            <div class="card-sub mb-2">Analisis Struktur Visual:</div>
+            ${active.tokens}
+          </div>
+
+          <p class="mt-2"><strong>Penjelasan Tata Bahasa (Bahasa Indonesia):</strong> ${active.rule}</p>
+          <div class="callout callout-rose mt-2">
+            <strong>Jebakan Klasik TOEFL:</strong> ${active.trap}
+          </div>
+
+          <div class="mt-3">
+            <strong>Latihan (${active.qType === 'SC' ? 'Part A: Structure Completion' : 'Part B: Written Expression — Klik bagian yang salah'}):</strong>
+            ${active.qType === "SC" ? `
+              <p class="mt-2 mb-2" style="font-size:15px; font-weight:600;">${active.q}</p>
+              <div id="s-quiz-opts">
+                ${active.opts.map((o, idx) => `<button class="opt-btn" onclick="checkSkillQuiz(this, ${idx}, ${active.ans}, 'Structure', '${active.title}', \`${active.q.replace(/`/g, "'")}\`, ${JSON.stringify(active.opts).replace(/"/g, '&quot;')}, \`${active.exp.replace(/`/g, "'")}\`, 's-quiz-exp')">${String.fromCharCode(65+idx)}. ${o}</button>`).join("")}
+              </div>
+            ` : `
+              <p class="mt-2 mb-3" style="font-size:15px; line-height:2.1; background:#fff; padding:12px; border:1px solid var(--border); border-radius:8px;">
+                ${active.sentenceParts.map((part, pIdx) => {
+                  const uIdx = active.underlined.indexOf(pIdx);
+                  if (uIdx >= 0) {
+                    const letter = String.fromCharCode(65 + uIdx);
+                    return `<span class="we-word" onclick="checkWEQuiz(this, ${uIdx}, ${active.ans}, '${active.title}', '${active.sentenceParts.join(" ")}', '${part}', '${active.sentenceParts[active.underlined[active.ans]]}', \`${active.exp.replace(/`/g, "'")}\`, 's-quiz-exp')">${part} <span class="we-label">(${letter})</span></span>`;
+                  }
+                  return `<span>${part} </span>`;
+                }).join("")}
+              </p>
+            `}
+            <div id="s-quiz-exp" class="hidden callout callout-teal mt-2"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderReading() {
+    const active = READING_SKILLS.find(r => r.id === state.rSelectedId) || READING_SKILLS[0];
+    const code = "R" + active.id;
+    const isMastered = state.masteredSkills.includes(code);
+
+    return `
+      <div class="card mb-3">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 5 — Reading Masterclass (Seluruh 14 Skills, Grup A–E, pp. 368–451)</div>
+            <div class="card-sub">Split-view bacaan akademik dengan sorotan kalimat bukti &amp; simulasi penyisipan kalimat CBT [■]</div>
+          </div>
+          <span class="badge b-teal">${active.grp}</span>
+        </div>
+        <div class="pill-row">
+          ${READING_SKILLS.map(r => `<button class="pill ${r.id === active.id ? 'active' : ''}" onclick="selectRSkill(${r.id})">${r.title.split(":")[0]}</button>`).join("")}
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="flex-between mb-2">
+            <strong>Academic Reading Passage (${active.page})</strong>
+            ${active.passage ? `<button class="btn btn-sm" onclick="toggleRHighlight()">${state.rHighlight ? 'Matikan Sorotan Bukti' : 'Sorot Bukti di Teks'}</button>` : ''}
+          </div>
+          <div class="passage-box">
+            ${active.passage
+              ? (state.rHighlight ? active.passage.replace(/class='hl'/g, "class='hl-evidence'") : active.passage)
+              : active.passageWithSlots.replace(/\[(\d)\]/g, (m, num) => `<span class="insert-slot ${state.rInsertSlot == num ? 'selected' : ''}" onclick="selectInsertSlot(${num})">[■ ${num}]</span>`)
+            }
+          </div>
+          <div class="callout mt-3">
+            <strong>Strategi Longman:</strong> ${active.tip}
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="flex-between mb-2">
+            <h3 class="card-title">${active.title}</h3>
+            <button class="btn btn-sm ${isMastered ? 'btn-teal' : ''}" onclick="toggleMastered('${code}')">
+              ${isMastered ? '✓ Mastered' : 'Tandai Mastered'}
+            </button>
+          </div>
+
+          ${active.passage ? `
+            <p class="mt-2 mb-3"><strong>Pertanyaan:</strong> ${active.q}</p>
+            <div id="r-quiz-opts">
+              ${active.opts.map((o, idx) => `<button class="opt-btn" onclick="checkSkillQuiz(this, ${idx}, ${active.ans}, 'Reading', '${active.title}', \`${active.q.replace(/`/g, "'")}\`, ${JSON.stringify(active.opts).replace(/"/g, '&quot;')}, \`${active.exp.replace(/`/g, "'")}\`, 'r-quiz-exp')">${String.fromCharCode(65+idx)}. ${o}</button>`).join("")}
+            </div>
+          ` : `
+            <div class="callout callout-amber">
+              <strong>Simulasi CBT Sentence Insertion (Skill 14):</strong><br/>
+              Klik salah satu kotak <code>[■ 1]</code> sampai <code>[■ 4]</code> pada bacaan di sebelah kiri untuk menyisipkan kalimat berikut:<br/><br/>
+              <em>"${active.insertSentence}"</em>
+            </div>
+            ${state.rInsertSlot ? `
+              <div class="callout ${state.rInsertSlot == active.correctSlot ? 'callout-teal' : 'callout-rose'} mt-3">
+                <strong>${state.rInsertSlot == active.correctSlot ? '✓ Tepat Sekali!' : '✗ Kurang Tepat (Coba lagi)'}</strong><br/>
+                ${active.exp}
+              </div>
+            ` : ''}
+          `}
+          <div id="r-quiz-exp" class="hidden callout callout-teal mt-2"></div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderWriting() {
+    const mins = String(Math.floor(state.wTimerSec / 60)).padStart(2, "0");
+    const secs = String(state.wTimerSec % 60).padStart(2, "0");
+    const words = state.wEssayText.trim() ? state.wEssayText.trim().split(/\s+/).length : 0;
+
+    return `
+      <div class="card mb-3">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 6 — Writing Masterclass (Skills 1–8 &amp; 30-Minute Timed Studio, pp. 473–512)</div>
+            <div class="card-sub">Kuasai struktur esai TWE / CBT (Skor 1.0 – 6.0) dan latih kecepatan menulis 250–300+ kata dalam 30 menit</div>
+          </div>
+          <span class="badge b-amber">Target Skor: 5.0 – 6.0</span>
+        </div>
+
+        <div class="grid-4 mt-2">
+          ${WRITING_SKILLS.map(w => {
+            const code = "W" + w.id;
+            const done = state.masteredSkills.includes(code);
+            return `
+              <div style="border:1px solid var(--border); border-radius:8px; padding:10px; background:var(--surface-alt);">
+                <div class="flex-between">
+                  <strong style="font-size:12.5px;">${w.title}</strong>
+                  <input type="checkbox" ${done ? 'checked' : ''} onchange="toggleMastered('${code}')" title="Tandai Mastered" />
+                </div>
+                <p class="card-sub mt-2">${w.desc}</p>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title mb-2">Interactive Essay Planner &amp; Rubrik Skor Longman</div>
+          <label class="card-sub"><strong>Pilih Topik Resmi TWE / CBT:</strong></label>
+          <select class="mt-2 mb-3" onchange="setWPrompt(this.value)">
+            ${WRITING_PROMPTS.map((p, i) => `<option value="${i}" ${state.wPromptIdx == i ? 'selected' : ''}>Topik ${i+1}: ${p.slice(0, 68)}...</option>`).join("")}
+          </select>
+          <div class="callout">
+            <strong>Prompt Lengkap:</strong><br/>${WRITING_PROMPTS[state.wPromptIdx]}
+          </div>
+
+          <div class="mt-3">
+            <strong>Kerangka Cepat (3 Menit Pertama):</strong>
+            <input type="text" class="mt-2" placeholder="1. Thesis Statement (Pendapat utama Anda)..." />
+            <input type="text" class="mt-2" placeholder="2. Body Paragraph 1 (Alasan 1 + Contoh spesifik)..." />
+            <input type="text" class="mt-2" placeholder="3. Body Paragraph 2 (Alasan 2 + Contoh spesifik)..." />
+          </div>
+
+          <table class="mt-3">
+            <thead><tr><th>Skor</th><th>Kriteria Rubrik TOEFL Writing</th></tr></thead>
+            <tbody>
+              <tr><td><strong>6</strong></td><td>Terorganisasi sangat baik, argumen mendalam, variasi kalimat kompleks, kesalahan grammar sangat minim.</td></tr>
+              <tr><td><strong>5</strong></td><td>Terorganisasi baik, contoh cukup jelas, beberapa kesalahan kecil namun tidak mengganggu makna.</td></tr>
+              <tr><td><strong>4</strong></td><td>Menjawab topik cukup memadai, namun pengembangan ide masih terbatas atau ada pola kesalahan grammar.</td></tr>
+              <tr><td><strong>1–3</strong></td><td>Kurang terstruktur, banyak kesalahan struktur kalimat dasar (fragment/run-on), atau menyimpang dari topik.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="flex-between mb-2">
+            <div>
+              <div class="card-title">Timed 30-Minute Essay Studio</div>
+              <div class="card-sub">Jumlah Kata: <strong>${words} kata</strong> (Target: 250–320 kata)</div>
+            </div>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="badge b-rose" style="font-size:14px;" id="w-timer-display">⏱ ${mins}:${secs}</span>
+              <button class="btn btn-primary btn-sm" onclick="toggleWTimer()">${state.wTimerRunning ? 'Pause' : 'Start'}</button>
+              <button class="btn btn-sm" onclick="resetWTimer()">Reset</button>
+            </div>
+          </div>
+          <textarea placeholder="Tulis esai bahasa Inggris Anda di sini (Introduction -> Body 1 -> Body 2 -> Conclusion)..." oninput="updateWEssay(this.value)">${state.wEssayText}</textarea>
+          <div class="callout callout-teal mt-2">
+            <strong>Checklist Penyuntingan (Skills 7–8):</strong> Pastikan setiap kalimat punya Subject &amp; Verb, gunakan transisi (<em>Furthermore, In contrast, For example</em>), dan cek akhiran jamak/singular.
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderAppendix() {
+    const appData = APPENDICES[state.appTab];
+    const cards = state.fcOnlyUnknown ? FLASHCARDS.filter(c => !state.vocabKnown.includes(c.term)) : FLASHCARDS;
+    const card = cards[state.fcIdx % Math.max(1, cards.length)];
+
+    return `
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title mb-2">Modul 7A — Referensi Lengkap Appendix A–I (pp. 565–600)</div>
+          <div class="pill-row">
+            ${Object.keys(APPENDICES).map(k => `<button class="pill ${state.appTab === k ? 'active' : ''}" onclick="setAppTab('${k}')">App. ${k}</button>`).join("")}
+          </div>
+          <h3 class="card-title mb-2">${appData.name}</h3>
+          <table>
+            <thead><tr><th>Pola / Kata Kunci</th><th>Arti &amp; Catatan Ujian</th></tr></thead>
+            <tbody>
+              ${appData.rows.map(r => `<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td></tr>`).join("")}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="flex-between mb-2">
+            <div>
+              <div class="card-title">Modul 7B — Academic Vocabulary Flashcard Lab</div>
+              <div class="card-sub">Dihafal: ${state.vocabKnown.length} / ${FLASHCARDS.length} kata</div>
+            </div>
+            <label style="font-size:12px; display:flex; align-items:center; gap:5px; cursor:pointer;">
+              <input type="checkbox" ${state.fcOnlyUnknown ? 'checked' : ''} onchange="toggleFcUnknown()" /> Hanya yang belum hafal
+            </label>
+          </div>
+
+          ${card ? `
+            <div class="flashcard mt-2" onclick="flipFlashcard()">
+              <span class="badge b-blue mb-2">${card.pos} • Klik kartu untuk membalik</span>
+              <h2 style="font-size:26px; color:var(--primary); margin:6px 0;">${card.term}</h2>
+              ${state.fcFlipped ? `
+                <p class="mt-2"><strong>Arti:</strong> ${card.def}</p>
+                <p class="card-sub mt-2"><em>"${card.ex}"</em></p>
+              ` : `<p class="card-sub mt-2">(Klik untuk melihat definisi &amp; contoh kalimat)</p>`}
+            </div>
+            <div class="flex-between mt-3">
+              <div style="display:flex; gap:6px;">
+                <button class="btn btn-sm" onclick="prevFc()">← Sebelumnya</button>
+                <button class="btn btn-sm" onclick="nextFc()">Berikutnya →</button>
+                <button class="btn btn-primary btn-sm" onclick="speakText('${card.term}')">🔊 Dengarkan</button>
+              </div>
+              <button class="btn btn-sm ${state.vocabKnown.includes(card.term) ? 'btn-teal' : ''}" onclick="toggleVocabKnown('${card.term}')">
+                ${state.vocabKnown.includes(card.term) ? '✓ Sudah Hafal' : 'Tandai Hafal'}
+              </button>
+            </div>
+          ` : `<div class="callout callout-teal">Selamat! Semua kosakata dalam daftar ini sudah ditandai hafal.</div>`}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPractice() {
+    const pool = state.pracMode === "ALL" ? PRACTICE_BANK : PRACTICE_BANK.filter(p => p.sec === state.pracMode);
+    const item = pool[state.pracIdx % pool.length];
+
+    return `
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 8 — TOEFL Practice Center (Simulasi Multi-Section)</div>
+            <div class="card-sub">Jawaban salah otomatis masuk ke Modul 9 (My Mistakes Analyzer) untuk dibedah</div>
+          </div>
+          <div class="pill-row" style="margin:0;">
+            ${["ALL", "Listening", "Structure", "Written Expression", "Reading"].map(m => `
+              <button class="pill ${state.pracMode === m ? 'active' : ''}" onclick="setPracMode('${m}')">${m}</button>
+            `).join("")}
+          </div>
+        </div>
+
+        <div class="callout mt-2">
+          <span class="badge b-purple">${item.sec}</span> <strong>${item.skillRef}</strong> — Soal ${(state.pracIdx % pool.length) + 1} dari ${pool.length}
+        </div>
+
+        <p style="font-size:15px; font-weight:600; margin:14px 0;">${item.q}</p>
+
+        <div>
+          ${item.opts.map((o, idx) => {
+            let cls = "opt-btn";
+            if (state.pracAnswered !== null) {
+              if (idx === item.ans) cls += " correct";
+              else if (idx === state.pracAnswered) cls += " wrong";
+            }
+            return `<button class="${cls}" onclick="answerPractice(${idx})">${String.fromCharCode(65+idx)}. ${o}</button>`;
+          }).join("")}
+        </div>
+
+        ${state.pracAnswered !== null ? `
+          <div class="callout ${state.pracAnswered === item.ans ? 'callout-teal' : 'callout-rose'} mt-3">
+            <strong>${state.pracAnswered === item.ans ? '✓ Jawaban Benar!' : '✗ Jawaban Salah (Tercatat di Mistake Analyzer)'}</strong><br/>
+            ${item.exp}
+          </div>
+        ` : ''}
+
+        <div class="flex-between mt-3">
+          <span class="card-sub">Total Skor Sesi: ${state.practiceStats.correct} Benar / ${state.practiceStats.attempted} Soal</span>
+          <button class="btn btn-primary" onclick="nextPractice()">Soal Berikutnya →</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderMistakes() {
+    return `
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 9 — My Mistakes Analyzer (Bedah Kesalahan 7 Poin)</div>
+            <div class="card-sub">Setiap soal yang salah dijawab di Practice Center otomatis dianalisis di sini</div>
+          </div>
+          ${state.mistakes.length > 0 ? `<button class="btn btn-sm" onclick="clearMistakes()">Hapus Semua Log</button>` : ''}
+        </div>
+
+        ${state.mistakes.length === 0 ? `
+          <div class="callout callout-teal">
+            Belum ada kesalahan yang tercatat! Coba kerjakan soal di <strong>Modul 8 (Practice Center)</strong> untuk menguji kemampuan Anda.
+          </div>
+        ` : state.mistakes.map(m => `
+          <div style="border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:12px; background:#fff;">
+            <div class="flex-between mb-2">
+              <div><span class="badge b-rose">${m.sec}</span> <strong>${m.skillRef}</strong></div>
+              <span class="card-sub">${m.date}</span>
+            </div>
+            <p><strong>1. Soal:</strong> ${m.q}</p>
+            <p class="mt-2" style="color:var(--rose);"><strong>2. Jawabanmu:</strong> ${m.userAns}</p>
+            <p style="color:var(--accent);"><strong>3. Jawaban Benar:</strong> ${m.correctAns}</p>
+            <p class="mt-2"><strong>4. Analisis Aturan Longman:</strong> ${m.exp}</p>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  function renderStudyPlan() {
+    const phases = [
+      { id: 0, title: "Fase 1 (Minggu 1–2): Fondasi Klausa & Kalimat (Structure Skills 1–19)", desc: "Kuasai identifikasi Subject, Verb, Object of Preposition, Appositive, Participles, Multiple Clauses, Reduced Clauses, dan Inversions." },
+      { id: 1, title: "Fase 2 (Minggu 3–4): Tata Bahasa Lanjutan (Structure 20–60) & Listening Part A (1–17)", desc: "Pelajari Subject-Verb Agreement, Parallelism, Verbs/Passives, Nouns/Pronouns, serta trik sinonim & negasi pada Short Dialogues." },
+      { id: 2, title: "Fase 3 (Minggu 5–6): Reading Comprehension (Skills 1–14) & CBT Listening (18–34)", desc: "Latih teknik skimming ide pokok, pronoun referent, vocabulary context clues, dan academic lectures/discussions." },
+      { id: 3, title: "Fase 4 (Minggu 7–8): Writing Esai 30 Menit (Skills 1–8), Appendix A–I & Simulasi Penuh", desc: "Tulis minimal 4 esai berwaktu 30 menit, hafalkan idiom/irregular verbs di Appendix, dan evaluasi log kesalahan." }
+    ];
+
+    return `
+      <div class="card">
+        <div class="card-title mb-2">Modul 10 — Personal Study Plan (Roadmap Belajar 8 Minggu)</div>
+        <p class="card-sub mb-3">Centang setiap fase setelah Anda menyelesaikan target materinya.</p>
+        ${phases.map(p => {
+          const checked = state.planChecks.includes(p.id);
+          return `
+            <div style="border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; background:${checked ? 'var(--accent-soft)' : '#fff'};">
+              <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
+                <input type="checkbox" ${checked ? 'checked' : ''} onchange="togglePlan(${p.id})" style="margin-top:4px;" />
+                <div>
+                  <strong>${p.title}</strong>
+                  <p class="card-sub mt-2">${p.desc}</p>
+                </div>
+              </label>
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+  }
+
+  function renderAssistant() {
+    return `
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 11 — TOEFL Study Assistant (Virtual Tutor Bahasa Indonesia)</div>
+            <div class="card-sub">Bekerja 100% mandiri di dalam Google Sites tanpa memerlukan API Key eksternal</div>
+          </div>
+          <span class="badge b-teal">Tutor Aktif</span>
+        </div>
+
+        <div id="chat-box" style="max-height:340px; overflow-y:auto; background:var(--surface-alt); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:12px;">
+          ${state.chatHistory.map(c => `
+            <div style="margin-bottom:10px; text-align:${c.role === 'user' ? 'right' : 'left'};">
+              <div style="display:inline-block; max-width:85%; padding:10px 14px; border-radius:10px; background:${c.role === 'user' ? 'var(--primary-light)' : '#fff'}; color:${c.role === 'user' ? '#fff' : 'var(--text)'}; border:1px solid var(--border); text-align:left;">
+                ${c.text}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+
+        <div class="pill-row">
+          <button class="pill" onclick="askTutorQuick('Apa itu Structure Skill 15 Inversion?')">Apa itu Inversion (Skill 15-19)?</button>
+          <button class="pill" onclick="askTutorQuick('Jelaskan bedanya make dan do')">Bedanya Make vs Do?</button>
+          <button class="pill" onclick="askTutorQuick('Tips Listening Short Dialogues')">Tips Listening Part A?</button>
+          <button class="pill" onclick="askTutorQuick('Cara cepat mengerjakan Reading Insertion')">Tips Sentence Insertion?</button>
+        </div>
+
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="tutor-input" placeholder="Ketik pertanyaan grammar, nomor skill, atau kalimat soal..." onkeydown="if(event.key==='Enter') sendTutorMsg()" />
+          <button class="btn btn-primary" onclick="sendTutorMsg()">Kirim</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderAudit() {
+    const items = [
+      ["Orientasi & Format Skor PBT (217–677) vs CBT (0–300)", "Halaman xi–xx", "Lengkap (Modul 2)"],
+      ["Listening Part A: Short Dialogues (Skills 1–17)", "Halaman 22–68", "Lengkap (Modul 3)"],
+      ["Listening Part B & C: Long Conversations & Long Talks (Skills 18–27)", "Halaman 74–108", "Lengkap (Modul 3)"],
+      ["CBT Listening: Casual Conversations, Academic Discussions & Lectures (Skills 28–34)", "Halaman 113–164", "Lengkap + Diagram (Modul 3)"],
+      ["Structure Groups A–E: Clauses, Reduced Clauses & Inversions (Skills 1–19)", "Halaman 198–248", "Lengkap + Color Tokens (Modul 4)"],
+      ["Structure & Written Expression Groups F–R (Skills 20–60)", "Halaman 249–330", "Lengkap + Latihan (Modul 4)"],
+      ["Reading Comprehension Groups A–E (Skills 1–14)", "Halaman 368–451", "Lengkap + Split View (Modul 5)"],
+      ["Writing Test / TWE & CBT Essay (Skills 1–8) + Rubrik 1–6", "Halaman 473–512", "Lengkap + 30m Timer (Modul 6)"],
+      ["Appendices A–I (Similar Sounds, Phrasal Verbs, Idioms, Prepositions, Word Parts)", "Halaman 565–600", "Lengkap + Flashcards (Modul 7)"]
+    ];
+
+    return `
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Modul 12 — Audit Kelengkapan Kurikulum Buku Deborah Phillips (2001)</div>
+            <div class="card-sub">Verifikasi 100% cakupan bab, halaman, dan sub-skill dalam format Single-File Google Sites</div>
+          </div>
+          <span class="badge b-teal">100% Terverifikasi</span>
+        </div>
+        <table>
+          <thead><tr><th>Bagian Kurikulum Buku</th><th>Referensi Halaman</th><th>Status Aplikasi</th></tr></thead>
+          <tbody>
+            ${items.map(it => `<tr><td><strong>${it[0]}</strong></td><td>${it[1]}</td><td><span class="badge b-teal">✓ ${it[2]}</span></td></tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  // =========================================================================
+  // 6. INTERACTION HANDLERS (EXPOSED GLOBALLY FOR INLINE EVENTS)
+  // =========================================================================
+  window.switchTab = function(tab) {
+    state.activeTab = tab;
+    document.querySelectorAll(".nav-btn").forEach(b => {
+      b.classList.toggle("active", b.getAttribute("data-tab") === tab);
+    });
+    render();
+  };
+
+  window.toggleMastered = toggleMastered;
+  window.speakText = speakText;
+
+  // Listening handlers
+  window.setLFilter = function(c) { state.lFilter = c; render(); };
+  window.selectLSkill = function(id) { state.lSelectedId = id; state.lShowTranscript = false; render(); };
+  window.toggleLTranscript = function() { state.lShowTranscript = !state.lShowTranscript; render(); };
+  window.playListeningAudio = function(id) {
+    const s = LISTENING_SKILLS.find(x => x.id === id);
+    if (s) speakText(s.dialogue.replace(/Man:|Woman:|Narrator:|Professor:|Student A:|Student B:|Lecturer:/g, ""));
+  };
+
+  // Structure handlers
+  window.setSGroup = function(g) { state.sGroupFilter = g; render(); };
+  window.setSSearch = function(val) { state.sSearch = val; render(); };
+  window.selectSSkill = function(id) { state.sSelectedId = id; state.sStage = 1; render(); };
+  window.setSStage = function(st) { state.sStage = st; render(); };
+
+  // Reading handlers
+  window.selectRSkill = function(id) { state.rSelectedId = id; state.rInsertSlot = null; render(); };
+  window.toggleRHighlight = function() { state.rHighlight = !state.rHighlight; render(); };
+  window.selectInsertSlot = function(slot) { state.rInsertSlot = slot; render(); };
+
+  // Writing handlers
+  window.setWPrompt = function(idx) { state.wPromptIdx = Number(idx); render(); };
+  window.updateWEssay = function(val) { state.wEssayText = val; };
+  let wInterval = null;
+  window.toggleWTimer = function() {
+    state.wTimerRunning = !state.wTimerRunning;
+    if (state.wTimerRunning) {
+      wInterval = setInterval(() => {
+        if (state.wTimerSec > 0) {
+          state.wTimerSec--;
+          const el = document.getElementById("w-timer-display");
+          if (el) {
+            const m = String(Math.floor(state.wTimerSec / 60)).padStart(2, "0");
+            const s = String(state.wTimerSec % 60).padStart(2, "0");
+            el.textContent = `⏱ ${m}:${s}`;
+          }
+        } else {
+          clearInterval(wInterval);
+          state.wTimerRunning = false;
+        }
+      }, 1000);
+    } else {
+      clearInterval(wInterval);
+    }
+    render();
+  };
+  window.resetWTimer = function() {
+    clearInterval(wInterval);
+    state.wTimerRunning = false;
+    state.wTimerSec = 1800;
+    render();
+  };
+
+  // Appendix & Flashcards
+  window.setAppTab = function(k) { state.appTab = k; render(); };
+  window.flipFlashcard = function() { state.fcFlipped = !state.fcFlipped; render(); };
+  window.nextFc = function() { state.fcIdx++; state.fcFlipped = false; render(); };
+  window.prevFc = function() { state.fcIdx = Math.max(0, state.fcIdx - 1); state.fcFlipped = false; render(); };
+  window.toggleFcUnknown = function() { state.fcOnlyUnknown = !state.fcOnlyUnknown; state.fcIdx = 0; render(); };
+  window.toggleVocabKnown = function(term) {
+    const idx = state.vocabKnown.indexOf(term);
+    if (idx >= 0) state.vocabKnown.splice(idx, 1);
+    else state.vocabKnown.push(term);
+    saveState();
+    render();
+  };
+
+  // Skill Quiz Checker
+  window.checkSkillQuiz = function(btn, chosen, ans, sec, skillRef, q, opts, exp, expId) {
+    const parent = btn.parentElement;
+    parent.querySelectorAll(".opt-btn").forEach((b, i) => {
+      b.disabled = true;
+      if (i === ans) b.classList.add("correct");
+      else if (i === chosen) b.classList.add("wrong");
+    });
+    const expBox = document.getElementById(expId);
+    if (expBox) {
+      expBox.classList.remove("hidden");
+      expBox.innerHTML = `<strong>${chosen === ans ? '✓ Benar!' : '✗ Kurang Tepat.'}</strong> ${exp}`;
+    }
+    if (chosen !== ans) {
+      logMistake({ sec, skillRef, q, userAns: opts[chosen], correctAns: opts[ans], exp });
+    }
+  };
+
+  window.checkWEQuiz = function(el, chosen, ans, skillRef, sentence, chosenWord, correctWord, exp, expId) {
+    const expBox = document.getElementById(expId);
+    if (expBox) {
+      expBox.classList.remove("hidden");
+      expBox.className = `callout mt-2 ${chosen === ans ? 'callout-teal' : 'callout-rose'}`;
+      expBox.innerHTML = `<strong>${chosen === ans ? '✓ Tepat! Bagian tersebut salah.' : '✗ Bukan bagian itu yang salah.'}</strong> ${exp}`;
+    }
+    if (chosen !== ans) {
+      logMistake({ sec: "Written Expression", skillRef, q: sentence, userAns: chosenWord, correctAns: correctWord, exp });
+    }
+  };
+
+  // Practice Center
+  window.setPracMode = function(m) { state.pracMode = m; state.pracIdx = 0; state.pracAnswered = null; render(); };
+  window.answerPractice = function(idx) {
+    if (state.pracAnswered !== null) return;
+    const pool = state.pracMode === "ALL" ? PRACTICE_BANK : PRACTICE_BANK.filter(p => p.sec === state.pracMode);
+    const item = pool[state.pracIdx % pool.length];
+    state.pracAnswered = idx;
+    state.practiceStats.attempted++;
+    if (idx === item.ans) {
+      state.practiceStats.correct++;
+    } else {
+      logMistake({
+        sec: item.sec,
+        skillRef: item.skillRef,
+        q: item.q,
+        userAns: item.opts[idx],
+        correctAns: item.opts[item.ans],
+        exp: item.exp
+      });
+    }
+    saveState();
+    render();
+  };
+  window.nextPractice = function() { state.pracIdx++; state.pracAnswered = null; render(); };
+  window.clearMistakes = function() { state.mistakes = []; saveState(); render(); };
+  window.togglePlan = function(id) {
+    const idx = state.planChecks.indexOf(id);
+    if (idx >= 0) state.planChecks.splice(idx, 1);
+    else state.planChecks.push(id);
+    saveState();
+    render();
+  };
+
+  // Virtual Tutor
+  function generateTutorReply(msg) {
+    const m = msg.toLowerCase();
+    if (m.includes("invers") || m.includes("15") || m.includes("16") || m.includes("17")) {
+      return "<strong>Inversi (Structure Skills 15–19):</strong> Susunan kalimat dibalik menjadi <em>Verb + Subject</em> ketika diawali: (1) Kata tanya pada kalimat tanya langsung, (2) Keterangan tempat di awal kalimat (<em>In the room are the books</em>), (3) Kata negatif di awal (<em>Never have I seen...</em>), atau (4) Pengandaian tanpa 'if' (<em>Had I known...</em>).";
+    }
+    if (m.includes("make") || m.includes("do") || m.includes("58")) {
+      return "<strong>Make vs Do (Structure Skill 58):</strong> Gunakan <em>make</em> untuk menciptakan/menghasilkan sesuatu (<em>make a mistake, make a decision, make progress</em>). Gunakan <em>do</em> untuk mengerjakan aktivitas/tugas (<em>do homework, do research, do a favor</em>).";
+    }
+    if (m.includes("listening") || m.includes("short dialogue")) {
+      return "<strong>Strategi Listening Short Dialogues (Skills 1–17):</strong> Fokus 80% perhatian pada <strong>pembicara kedua (baris terakhir)</strong>, cari jawaban berupa <em>sinonim</em> (jangan pilih kata yang bunyinya sama persis karena biasanya jebakan!), dan perhatikan kalimat pasif serta double negative.";
+    }
+    if (m.includes("insertion") || m.includes("14")) {
+      return "<strong>Sentence Insertion (Reading Skill 14):</strong> Periksa kata rujukan di dalam kalimat sisipan seperti <em>this, these, such, however, consequently</em>. Pastikan kalimat sebelum kotak <code>[■]</code> memperkenalkan istilah yang dirujuk tersebut.";
+    }
+    return "<strong>Analisis Cepat Tutor Longman:</strong> Untuk membedah soal Structure TOEFL, selalu langkah 1–2–3 ini: (1) Coret semua <em>Prepositional Phrase</em> (in, on, at, of, with + Noun), (2) Tandai semua <em>Verb</em> utama, (3) Hitung jumlah <em>Connector</em>. Rumus wajib: <strong>Jumlah Verb = Jumlah Connector + 1</strong>.";
+  }
+
+  window.sendTutorMsg = function() {
+    const inp = document.getElementById("tutor-input");
+    if (!inp || !inp.value.trim()) return;
+    const text = inp.value.trim();
+    state.chatHistory.push({ role: "user", text });
+    state.chatHistory.push({ role: "bot", text: generateTutorReply(text) });
+    render();
+    const box = document.getElementById("chat-box");
+    if (box) box.scrollTop = box.scrollHeight;
+  };
+
+  window.askTutorQuick = function(q) {
+    state.chatHistory.push({ role: "user", text: q });
+    state.chatHistory.push({ role: "bot", text: generateTutorReply(q) });
+    render();
+  };
+
+  // =========================================================================
+  // 7. MAIN RENDER LOOP
+  // =========================================================================
+  function render() {
+    const root = document.getElementById("app-root");
+    if (!root) return;
+    switch (state.activeTab) {
+      case "dashboard": root.innerHTML = renderDashboard(); break;
+      case "fundamentals": root.innerHTML = renderFundamentals(); break;
+      case "listening": root.innerHTML = renderListening(); break;
+      case "structure": root.innerHTML = renderStructure(); break;
+      case "reading": root.innerHTML = renderReading(); break;
+      case "writing": root.innerHTML = renderWriting(); break;
+      case "appendix": root.innerHTML = renderAppendix(); break;
+      case "practice": root.innerHTML = renderPractice(); break;
+      case "mistakes": root.innerHTML = renderMistakes(); break;
+      case "studyplan": root.innerHTML = renderStudyPlan(); break;
+      case "assistant": root.innerHTML = renderAssistant(); break;
+      case "audit": root.innerHTML = renderAudit(); break;
+      default: root.innerHTML = renderDashboard();
+    }
+    updateTopbar();
+  }
+
+  document.querySelectorAll(".nav-btn").forEach(btn => {
+    btn.addEventListener("click", () => switchTab(btn.getAttribute("data-tab")));
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
